@@ -1273,28 +1273,57 @@
     }
     .steps-box{
       display:grid;
-      grid-template-columns:repeat(2,minmax(0,1fr));
-      gap:20px;
-      margin-top:0;
-      text-align:left;
+      grid-template-columns:repeat(2, minmax(0, 1fr));
+      gap:24px;
+      width:min(100%, 980px);
+      margin:0 auto;
+      position:relative;
+      z-index:3;
+      text-align:center;
     }
     .step{
-      background:linear-gradient(180deg,#ffffff,#f7f9ff);
-      border:1px solid rgba(47,93,204,.10);
-      border-radius:22px;
-      padding:22px 20px;
-      box-shadow:0 14px 30px rgba(15,23,42,.08);
+      width:100%;
+      min-height:190px;
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      justify-content:flex-start;
+      gap:6px;
+      text-align:center;
+      padding:24px 18px 26px;
+      background:rgba(255,255,255,.08);
+      border:1px solid rgba(255,255,255,.14);
+      border-radius:26px;
+      color:#fff;
+      transition:transform .25s ease, background .25s ease, border-color .25s ease, box-shadow .25s ease;
+      backdrop-filter:blur(6px);
+      box-shadow:0 12px 28px rgba(15,23,42,.10);
       position:relative;
       overflow:hidden;
     }
+    .step:hover{
+      transform:translateY(-4px);
+      background:rgba(255,255,255,.14);
+      border-color:rgba(255,255,255,.28);
+      box-shadow:0 18px 34px rgba(15,23,42,.16);
+    }
     .step::after{
-      content:"";
-      position:absolute;
-      top:0;
-      left:0;
-      right:0;
-      height:4px;
-      background:linear-gradient(90deg,#2f5dcc,#6f95ff);
+      display:none;
+    }
+    .step .png-icon-wrap{
+      width:86px;
+      height:86px;
+      margin:0 auto 14px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      flex:0 0 auto;
+    }
+    .step .png-icon{
+      width:76px;
+      height:76px;
+      object-fit:contain;
+      display:block;
     }
     .step span{
       display:inline-flex;
@@ -1308,20 +1337,27 @@
       font-weight:800;
       font-size:14px;
       border-radius:999px;
-      margin-bottom:14px;
+      margin-bottom:8px;
       box-shadow:0 10px 22px rgba(47,93,204,.22);
     }
     .step h4{
       margin:0 0 10px;
-      font-size:20px;
-      line-height:1.35;
-      color:#16213a;
+      font-size:18px;
+      line-height:1.3;
+      color:#ffffff;
+      font-weight:500;
+      max-width:240px;
     }
     .step p{
       margin:0;
-      font-size:15px;
-      color:#5f6777;
-      line-height:1.8;
+      color:#eef4ff;
+      font-size:18px;
+      line-height:1.9;
+      max-width:320px;
+      font-weight:500;
+      text-shadow:none;
+      letter-spacing:normal;
+      font-family:"Playfair Display",serif;
     }
 
     .highlight-summary{
@@ -1332,12 +1368,23 @@
       margin-right:calc(50% - 50vw);
       text-align:center;
       overflow:hidden;
+      background:linear-gradient(180deg,#2f5dcc 0%, #2d59c4 100%);
+      padding:0 0 96px;
+      position:relative;
+    }
+    .highlight-summary::before{
+      content:"";
+      position:absolute;
+      inset:0;
+      background:radial-gradient(circle at top center, rgba(255,255,255,.10), transparent 42%);
+      pointer-events:none;
+      z-index:0;
     }
     .individual-hero-banner{
       position:relative;
       width:100vw;
       max-width:100vw;
-      min-height:720px;
+      min-height:560px;
       display:flex;
       align-items:center;
       justify-content:center;
@@ -1345,10 +1392,7 @@
       overflow:hidden;
       border-radius:0;
       box-shadow:none;
-      background:
-        linear-gradient(180deg, rgba(255,255,255,.30) 0%, rgba(255,255,255,.10) 20%, rgba(47,93,204,.18) 46%, rgba(47,93,204,.72) 78%, rgba(47,93,204,.96) 100%),
-        url('hero-bg.jpg') center/cover no-repeat,
-        linear-gradient(135deg,#e8e0d6,#d9d2c8);
+      background:transparent;
       margin:0;
       isolation:isolate;
     }
@@ -1356,7 +1400,7 @@
       content:"";
       position:absolute;
       inset:0;
-      background:radial-gradient(circle at center, rgba(255,255,255,.12) 0%, rgba(255,255,255,0) 48%);
+      background:radial-gradient(circle at center, rgba(255,255,255,.10) 0%, rgba(255,255,255,0) 52%);
       pointer-events:none;
       z-index:1;
     }
@@ -1367,7 +1411,7 @@
       right:0;
       bottom:0;
       height:220px;
-      background:linear-gradient(to bottom, rgba(47,93,204,0) 0%, rgba(47,93,204,.12) 18%, rgba(47,93,204,.36) 40%, rgba(47,93,204,.68) 68%, rgba(47,93,204,.92) 100%);
+      background:linear-gradient(to bottom, rgba(47,93,204,0) 0%, rgba(47,93,204,.10) 22%, rgba(47,93,204,.26) 42%, rgba(47,93,204,.52) 70%, rgba(47,93,204,.78) 100%);
       pointer-events:none;
       z-index:1;
     }
@@ -1382,13 +1426,38 @@
       font-weight:800;
       color:#ffffff;
       text-align:center;
-      text-shadow:0 6px 22px rgba(0,0,0,.34);
+      text-shadow:0 6px 22px rgba(0,0,0,.20);
+    }
+    .highlight-summary .step{
+      background:rgba(255,255,255,.08);
+      border:1px solid rgba(255,255,255,.14);
+      border-radius:26px;
+      box-shadow:0 12px 28px rgba(15,23,42,.10);
+      backdrop-filter:blur(6px);
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      justify-content:center;
+      text-align:center;
+      min-height:190px;
+      padding:24px 18px;
+      transition:transform .25s ease, background .25s ease, border-color .25s ease, box-shadow .25s ease;
+    }
+    .highlight-summary .step:hover{
+      transform:translateY(-4px);
+      background:rgba(255,255,255,.14);
+      border-color:rgba(255,255,255,.28);
+      box-shadow:0 18px 34px rgba(15,23,42,.16);
     }
     .steps-box{
       position:relative;
       z-index:3;
-      width:min(100%, 920px);
+      width:min(100%, 980px);
       margin:-64px auto 0;
+      display:grid;
+      grid-template-columns:repeat(2, minmax(0, 1fr));
+      gap:24px;
+      padding:0 24px;
     }
     .highlight-summary p{
       margin:0;
@@ -1469,8 +1538,18 @@
         gap:16px;
       }
       .step{
-        padding:18px 16px;
-        border-radius:18px;
+        min-height:160px;
+        padding:20px 14px 22px;
+        border-radius:22px;
+      }
+      .step .png-icon-wrap{
+        width:74px;
+        height:74px;
+        margin-bottom:10px;
+      }
+      .step .png-icon{
+        width:64px;
+        height:64px;
       }
       .step h4{
         font-size:17px;
@@ -1484,11 +1563,12 @@
         margin-top:70px;
         margin-left:calc(50% - 50vw);
         margin-right:calc(50% - 50vw);
+        padding:0 0 76px;
       }
       .individual-hero-banner{
         width:100vw;
         max-width:100vw;
-        min-height:480px;
+        min-height:420px;
         padding:28px 18px 96px;
         border-radius:0;
         margin:0;
@@ -1496,6 +1576,7 @@
       .steps-box{
         width:100%;
         margin:-46px auto 0;
+        padding:0 16px;
       }
       .individual-hero-banner h3{
         font-size:clamp(34px,10vw,54px);
@@ -2010,6 +2091,27 @@
   text-shadow:0 4px 14px rgba(0,0,0,.28) !important;
 }
 
+
+/* FINAL FIX: strong text colors for the 4 step cards */
+.highlight-summary .steps-box .step,
+.highlight-summary .steps-box .step *{
+  -webkit-text-fill-color: initial;
+}
+.highlight-summary .steps-box .step h4{
+  color:#ffffff !important;
+}
+.highlight-summary .steps-box .step p{
+  color:#f3f7ff !important;
+  font-size:18px !important;
+  line-height:1.9 !important;
+  font-weight:500 !important;
+  text-shadow:none !important;
+  opacity:1 !important;
+}
+.highlight-summary .steps-box .step span{
+  color:#ffffff !important;
+}
+
 </style>
 </head>
 <body>
@@ -2237,22 +2339,34 @@
         <h3>Individuell auf Ihren Bedarf abgestimmt</h3>
       </div>
       <div class="steps-box">
-        <div class="step">
+        <div class="step reveal">
+          <div class="png-icon-wrap">
+            <img class="png-icon" src="step-1.png" alt="Bedarf analysieren">
+          </div>
           <span class="num-normal">01</span>
           <h4>Bedarf analysieren</h4>
           <p>Wir schauen uns Ihr Objekt, Ihre Flächen und Ihre Wünsche genau an, damit die Reinigung von Anfang an passend geplant wird.</p>
         </div>
-        <div class="step">
+        <div class="step reveal">
+          <div class="png-icon-wrap">
+            <img class="png-icon" src="step-2.png" alt="Passenden Turnus festlegen">
+          </div>
           <span class="num-normal">02</span>
           <h4>Passenden Turnus festlegen</h4>
           <p>Ob wöchentlich, alle 14 Tage, monatlich, vierteljährlich oder individuell – wir richten den Einsatz nach Ihrem Alltag aus.</p>
         </div>
-        <div class="step">
+        <div class="step reveal">
+          <div class="png-icon-wrap">
+            <img class="png-icon" src="step-3.png" alt="Leistung zuverlässig umsetzen">
+          </div>
           <span class="num-normal">03</span>
           <h4>Leistung zuverlässig umsetzen</h4>
           <p>Unser Team arbeitet pünktlich, sorgfältig und mit einem klaren Ablauf, damit alle Bereiche sauber und gepflegt bleiben.</p>
         </div>
-        <div class="step">
+        <div class="step reveal">
+          <div class="png-icon-wrap">
+            <img class="png-icon" src="step-4.png" alt="Flexibel anpassen">
+          </div>
           <span class="num-normal">04</span>
           <h4>Flexibel anpassen</h4>
           <p>Bei saisonalen Einsätzen, stärker genutzten Bereichen oder neuen Anforderungen passen wir den Reinigungsservice unkompliziert an.</p>
@@ -2529,7 +2643,7 @@
         badge: 'Wohnungsservice',
         title: 'Wohnungsreinigung',
         lead: 'Saubere Wohnräume, flexible Termine und ein Ergebnis, das sofort auffällt – für private Haushalte, Ferienwohnungen und Übergaben.',
-        image: 'service-1.png',
+        image: 'service-6.png',
         tasks: [
           'Staubsaugen und Wischen aller Böden',
           'Reinigung von Küche, Bad und WC',
@@ -2543,7 +2657,7 @@
         badge: 'Klare Sicht',
         title: 'Glasreinigung',
         lead: 'Glasflächen, Fenster und Rahmen werden streifenfrei gereinigt – für private und gewerbliche Objekte mit repräsentativem Eindruck.',
-        image: 'service-2.png',
+        image: 'service-7.png',
         tasks: [
           'Fenster innen und außen reinigen',
           'Rahmen, Falze und Fensterbänke säubern',
@@ -2557,7 +2671,7 @@
         badge: 'Gepflegte Eingänge',
         title: 'Treppenhausreinigung',
         lead: 'Saubere Treppenhäuser schaffen einen guten ersten Eindruck und erhöhen das Wohlgefühl für Bewohner, Besucher und Mitarbeitende.',
-        image: 'service-3.png',
+        image: 'service-8.png',
         tasks: [
           'Böden kehren, saugen und wischen',
           'Geländer, Handläufe und Briefkastenanlagen reinigen',
@@ -2571,7 +2685,7 @@
         badge: 'Außenbereiche',
         title: 'Gartenpflege',
         lead: 'Gepflegte Grünflächen, saubere Außenbereiche und zuverlässige Unterstützung rund um Grundstück und Garten.',
-        image: 'service-4.png',
+        image: 'service-9.png',
         tasks: [
           'Rasen mähen und Kanten nacharbeiten',
           'Laub, Unkraut und Schnittgut entfernen',
