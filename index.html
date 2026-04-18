@@ -19,6 +19,10 @@
       --line:rgba(17,24,39,.08);
       --container:1180px;
       --shadow:0 16px 40px rgba(15,23,42,.10);
+      --hero-gradient-main:linear-gradient(180deg,#2f5dcc 0%, #2d59c4 100%);
+      --hero-blend-down:linear-gradient(to bottom, rgba(47,93,204,0) 0%, rgba(47,93,204,.18) 18%, rgba(47,93,204,.46) 42%, rgba(47,93,204,.78) 72%, rgba(47,93,204,1) 100%);
+      --hero-blend-soft:linear-gradient(to bottom, rgba(47,93,204,0) 0%, rgba(47,93,204,.10) 22%, rgba(47,93,204,.26) 42%, rgba(47,93,204,.52) 70%, rgba(47,93,204,.78) 100%);
+      --hero-section-fade:linear-gradient(to bottom, rgba(47,93,204,1) 0%, rgba(47,93,204,.92) 18%, rgba(47,93,204,.70) 34%, rgba(47,93,204,.38) 52%, rgba(47,93,204,.12) 68%, rgba(246,242,236,1) 100%);
     }
 
     *{box-sizing:border-box}
@@ -439,7 +443,7 @@
     }
 
     .team{
-      background:linear-gradient(180deg, #f8f9fd, rgba(255,255,255,.55));
+      background:linear-gradient(180deg, rgba(47,93,204,.08), rgba(255,255,255,.55));
     }
     .team-grid{
       display:grid;
@@ -563,7 +567,7 @@
     }
     .contact-card.left{
       color:#fff;
-      background:linear-gradient(135deg,#16213a,#2f5dcc);
+      background:linear-gradient(135deg,#16213a 0%, #2448a6 58%, #2f5dcc 100%);
       border-radius:38px;
       padding:40px;
       box-shadow:var(--shadow);
@@ -726,6 +730,8 @@
 
 
     .highlight-box.highlight-box-image-only{
+      display:none;
+
       padding:0;
       overflow:hidden;
       display:block;
@@ -887,7 +893,7 @@
     .reviews{
       padding:54px 0 92px;
       margin-top:-2px;
-      background:linear-gradient(180deg,#2f5dcc 0%, #2d59c4 100%);
+      background:var(--hero-gradient-main);
       color:#fff;
       overflow:hidden;
       position:relative;
@@ -1072,7 +1078,7 @@
   
     .png-services{
       padding:78px 0 86px;
-      background:linear-gradient(180deg,#2f5dcc 0%, #2d59c4 100%);
+      background:var(--hero-gradient-main);
       color:#fff;
     }
     .png-services .section-head{
@@ -1175,17 +1181,7 @@
       padding:86px 0 110px;
       position:relative;
       margin-top:-2px;
-      background:linear-gradient(
-        to bottom,
-        rgba(47,93,204,1) 0%,
-        rgba(47,93,204,.92) 10%,
-        rgba(47,93,204,.72) 22%,
-        rgba(47,93,204,.42) 36%,
-        rgba(47,93,204,.16) 50%,
-        rgba(47,93,204,.05) 60%,
-        #f7f3ee 74%,
-        #f7f3ee 100%
-      );
+      background:var(--hero-section-fade);
     }
     .highlight-services::before{
       content:"";
@@ -1194,12 +1190,7 @@
       left:0;
       right:0;
       height:128px;
-      background:linear-gradient(
-        to bottom,
-        rgba(47,93,204,0),
-        rgba(47,93,204,.88) 68%,
-        rgba(47,93,204,1)
-      );
+      background:var(--hero-blend-down);
       pointer-events:none;
     }
     .highlight-grid{
@@ -1368,7 +1359,7 @@
       margin-right:calc(50% - 50vw);
       text-align:center;
       overflow:hidden;
-      background:linear-gradient(180deg,#2f5dcc 0%, #2d59c4 100%);
+      background:var(--hero-gradient-main);
       padding:0 0 96px;
       position:relative;
     }
@@ -1413,7 +1404,7 @@
       right:0;
       bottom:0;
       height:220px;
-      background:linear-gradient(to bottom, rgba(47,93,204,0) 0%, rgba(47,93,204,.10) 22%, rgba(47,93,204,.26) 42%, rgba(47,93,204,.52) 70%, rgba(47,93,204,.78) 100%);
+      background:var(--hero-blend-soft);
       pointer-events:none;
       z-index:1;
     }
@@ -1682,7 +1673,7 @@
       min-height:420px;
       border-radius:32px 32px 0 0;
       overflow:hidden;
-      background:linear-gradient(135deg,#16213a,#2f5dcc);
+      background:linear-gradient(135deg,#16213a 0%, #2448a6 58%, #2f5dcc 100%);
     }
     .modal-hero-copy{
       padding:54px 42px 42px;
@@ -1972,16 +1963,7 @@
   margin-top:-2px;
   padding-top:110px;
   padding-bottom:42px;
-  background:linear-gradient(
-    to bottom,
-    rgba(47,93,204,1) 0%,
-    rgba(47,93,204,.90) 10%,
-    rgba(47,93,204,.65) 22%,
-    rgba(47,93,204,.32) 38%,
-    rgba(47,93,204,.10) 52%,
-    rgba(246,242,236,1) 72%,
-    rgba(246,242,236,1) 100%
-  );
+  background:var(--hero-section-fade);
 }
 .map-section::before{
   content:"";
@@ -1990,12 +1972,7 @@
   left:0;
   right:0;
   height:120px;
-  background:linear-gradient(
-    to bottom,
-    rgba(47,93,204,0),
-    rgba(47,93,204,.86) 68%,
-    rgba(47,93,204,1)
-  );
+  background:var(--hero-blend-down);
   pointer-events:none;
 }
 .map-section .container{
@@ -2015,16 +1992,7 @@
   position:relative;
   margin-top:-2px;
   padding-top:110px;
-  background:linear-gradient(
-    to bottom,
-    rgba(47,93,204,1) 0%,
-    rgba(47,93,204,.90) 10%,
-    rgba(47,93,204,.65) 22%,
-    rgba(47,93,204,.32) 38%,
-    rgba(47,93,204,.10) 52%,
-    rgba(246,242,236,1) 72%,
-    rgba(246,242,236,1) 100%
-  );
+  background:var(--hero-section-fade);
 }
 #kontakt::before{
   content:"";
@@ -2033,12 +2001,7 @@
   left:0;
   right:0;
   height:120px;
-  background:linear-gradient(
-    to bottom,
-    rgba(47,93,204,0),
-    rgba(47,93,204,.86) 68%,
-    rgba(47,93,204,1)
-  );
+  background:var(--hero-blend-down);
   pointer-events:none;
 }
 #kontakt .container{
@@ -2330,10 +2293,7 @@
     <div class="highlight-grid">
       <article class="highlight-card">
         <img src="highlight-1.png" alt="Professionelle Reinigung im Innenbereich" class="highlight-image">
-        <div class="highlight-box highlight-box-image-only">
-          <img src="cleaning-icon1.png" alt="Reinigungsicon" class="highlight-full-image">
-        </div>
-      </article>
+</article>
     </div>
 
     <div class="highlight-summary reveal">
