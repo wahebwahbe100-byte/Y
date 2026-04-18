@@ -1957,76 +1957,96 @@
 
 
 
-/* === BLEND EFFECT ABOVE MAP SECTION === */
-.map-section{
-  position:relative;
-  margin-top:-2px;
-  padding-top:110px;
-  padding-bottom:42px;
-  background:var(--hero-section-fade);
-}
-.map-section::before{
-  content:"";
-  position:absolute;
-  top:-90px;
-  left:0;
-  right:0;
-  height:120px;
-  background:var(--hero-blend-down);
-  pointer-events:none;
-}
-.map-section .container{
-  position:relative;
-  z-index:2;
-}
-.map-section .section-head h2{
-  color:#ffffff;
-  text-shadow:0 8px 24px rgba(0,0,0,.30);
-}
-.map-section .section-head p{
-  color:#eef4ff;
-  text-shadow:0 4px 14px rgba(0,0,0,.24);
-}
-/* === BLEND EFFECT ABOVE KONTAKT SECTION === */
+/* === MERGED KONTAKT + MAP SECTION === */
 #kontakt{
   position:relative;
-  margin-top:-2px;
+  margin-top:0;
   padding-top:110px;
-  background:var(--hero-section-fade);
+  padding-bottom:96px;
+  background:linear-gradient(
+    180deg,
+    #2f5dcc 0%,
+    #3964cf 16%,
+    #4d73d5 34%,
+    #6f8ddd 56%,
+    #98ace6 76%,
+    #cdd8f3 90%,
+    #f6f2ec 100%
+  );
 }
-#kontakt::before{
-  content:"";
-  position:absolute;
-  top:-90px;
-  left:0;
-  right:0;
-  height:120px;
-  background:var(--hero-blend-down);
-  pointer-events:none;
+#kontakt::before,
+#kontakt::after,
+.map-section::before,
+.map-section::after{
+  content:none !important;
+  display:none !important;
 }
-#kontakt .container{
+#kontakt .container,
+.map-section .container{
   position:relative;
   z-index:2;
 }
 #kontakt .section-head h2{
   color:#ffffff;
-  text-shadow:0 8px 24px rgba(0,0,0,.30);
+  text-shadow:0 8px 24px rgba(0,0,0,.22);
 }
 #kontakt .section-head p{
   color:#eef4ff;
-  text-shadow:0 4px 14px rgba(0,0,0,.24);
+  text-shadow:0 4px 14px rgba(0,0,0,.18);
+}
+
+.contact-map-merged{
+  margin-top:34px;
+  padding:28px;
+  border-radius:38px;
+  background:linear-gradient(180deg, rgba(255,255,255,.32) 0%, rgba(255,255,255,.72) 100%);
+  border:1px solid rgba(255,255,255,.30);
+  box-shadow:0 22px 48px rgba(15,23,42,.10);
+  backdrop-filter:blur(10px);
+}
+.contact-map-merged .section-head{
+  margin:0 0 26px;
+  text-align:left;
+  max-width:none;
+}
+.contact-map-merged .section-head h2{
+  color:#16213a !important;
+  text-shadow:none !important;
+}
+.contact-map-merged .section-head p{
+  color:#4b5567 !important;
+  text-shadow:none !important;
+}
+.map-section{
+  position:relative;
+  margin-top:0;
+  padding:0;
+  background:transparent;
+}
+.map-section .section-head{
+  margin-bottom:26px;
+}
+.map-section .section-head h2{
+  color:#16213a;
+  text-shadow:none;
+}
+.map-section .section-head p{
+  color:var(--muted);
+  text-shadow:none;
 }
 
     @media (max-width:780px){
       #kontakt{
         padding-top:90px;
+        padding-bottom:72px;
       }
-      #kontakt::before{
-        top:-70px;
-        height:90px;
+      .contact-map-merged{
+        margin-top:22px;
+        padding:18px;
+        border-radius:24px;
       }
       .map-section{
-        padding:0 0 28px;
+        padding:0;
       }
       .map-shell{
         border-radius:22px;
@@ -2057,6 +2077,58 @@
 }
 
 
+
+/* === MERGED INDIVIDUAL + KONTAKT SECTION === */
+.merged-contact-section{
+  width:min(100%, 1100px);
+  margin:72px auto 0;
+  padding:0 24px;
+  position:relative;
+  z-index:3;
+}
+.merged-contact-intro{
+  margin:0 auto 34px;
+  text-align:center;
+}
+.merged-contact-intro h2{
+  color:#ffffff !important;
+  text-shadow:0 8px 24px rgba(0,0,0,.28);
+}
+.merged-contact-intro p{
+  color:#eef4ff !important;
+  text-shadow:0 4px 14px rgba(0,0,0,.20);
+}
+.merged-contact-section .contact-shell{
+  width:100%;
+}
+.merged-contact-section .contact-map-merged{
+  margin-top:28px;
+}
+.merged-contact-section .map-section{
+  padding:0;
+  background:transparent;
+}
+.merged-contact-section .map-section .section-head{
+  margin:0 auto 24px;
+}
+.merged-contact-section .map-section .section-head h2{
+  color:#ffffff;
+  text-shadow:0 8px 24px rgba(0,0,0,.22);
+}
+.merged-contact-section .map-section .section-head p{
+  color:#eef4ff;
+  text-shadow:0 4px 14px rgba(0,0,0,.18);
+}
+@media (max-width:780px){
+  .merged-contact-section{
+    margin-top:56px;
+    padding:0 16px;
+  }
+  .merged-contact-intro{
+    margin-bottom:24px;
+  }
+}
+
 /* FINAL FIX: strong text colors for the 4 step cards */
 .highlight-summary .steps-box .step,
 .highlight-summary .steps-box .step *{
@@ -2075,6 +2147,75 @@
 }
 .highlight-summary .steps-box .step span{
   color:#ffffff !important;
+}
+
+
+
+/* === FINAL MAP + FOOTER MERGE FIX v2 === */
+.highlight-summary{
+  padding-bottom:0 !important;
+  margin-bottom:0 !important;
+}
+.merged-contact-section{
+  margin-bottom:0 !important;
+  padding-bottom:0 !important;
+}
+.merged-contact-section .contact-map-merged{
+  margin-bottom:0 !important;
+  padding-bottom:0 !important;
+}
+.merged-contact-section .map-section{
+  margin:0 !important;
+  padding:0 !important;
+}
+.merged-contact-section .section-head{
+  margin-bottom:18px !important;
+}
+.merged-contact-section .map-shell{
+  margin-bottom:0 !important;
+  border-radius:30px 30px 0 0 !important;
+}
+.merged-contact-section iframe{
+  display:block !important;
+  margin:0 !important;
+  vertical-align:bottom;
+}
+footer{
+  margin-top:-140px !important;
+  padding-top:140px !important;
+  position:relative;
+  z-index:5;
+}
+footer .container{
+  margin-top:0 !important;
+}
+footer .footer-shell{
+  margin-top:0 !important;
+  border-radius:28px 28px 0 0 !important;
+}
+@media (max-width:780px){
+  .highlight-summary{
+    padding-bottom:0 !important;
+    margin-bottom:0 !important;
+  }
+  .merged-contact-section{
+    margin-bottom:0 !important;
+    padding-bottom:0 !important;
+  }
+  .merged-contact-section .contact-map-merged{
+    margin-bottom:0 !important;
+    padding-bottom:0 !important;
+  }
+  .merged-contact-section .map-shell{
+    border-radius:22px 22px 0 0 !important;
+  }
+  footer{
+    margin-top:-110px !important;
+    padding-top:110px !important;
+  }
+  footer .footer-shell{
+    border-radius:22px 22px 0 0 !important;
+  }
 }
 
 </style>
@@ -2334,98 +2475,113 @@
           <p>Bei saisonalen Einsätzen, stärker genutzten Bereichen oder neuen Anforderungen passen wir den Reinigungsservice unkompliziert an.</p>
         </div>
       </div>
-    </div>
-  </div>
-</section>
 
+      <div id="kontakt" class="merged-contact-section reveal">
+        <div class="merged-contact-intro section-head">
+          <h2>Kontakt & Angebotsanfrage</h2>
+          <p>Teilen Sie uns Ihren Bedarf mit – wir melden uns persönlich mit einer passenden Lösung zurück.</p>
+        </div>
 
-<section id="kontakt" class="reveal">
-    <div class="container">
-      <div class="section-head">
-        <h2>Kontakt & Angebotsanfrage</h2>
-        <p>Teilen Sie uns Ihren Bedarf mit – wir melden uns persönlich mit einer passenden Lösung zurück.</p>
-      </div>
+        <div class="contact-shell reveal">
+          <div class="contact-card left">
+            <h3>Wir freuen uns auf Ihre Anfrage</h3>
+            <p>Ob Reinigung, Facility Management, Treppenhaus, Glasflächen oder Gartenpflege – wir beraten Sie persönlich und erstellen ein passendes Angebot.</p>
+            <div class="contact-list">
+              <div class="contact-item">
+                <strong>Telefon</strong>
+                <a href="tel:+4917610870618" class="num-normal">+49 176 10870618</a>
+              </div>
+              <div class="contact-item">
+                <strong>E-Mail</strong>
+                <a href="mailto:info@gebaeudeservicelb.com">info@gebaeudeservicelb.com</a>
+              </div>
+              <div class="contact-item">
+                <strong>Adresse</strong>
+                <span class="num-normal">Karl-Leisner-Str. 2, 47623 Kevelaer</span>
+              </div>
+            </div>
+          </div>
 
-      <div class="contact-shell reveal">
-        <div class="contact-card left">
-          <h3>Wir freuen uns auf Ihre Anfrage</h3>
-          <p>Ob Reinigung, Facility Management, Treppenhaus, Glasflächen oder Gartenpflege – wir beraten Sie persönlich und erstellen ein passendes Angebot.</p>
-          <div class="contact-list">
-            <div class="contact-item">
-              <strong>Telefon</strong>
-              <a href="tel:+4917610870618" class="num-normal">+49 176 10870618</a>
-            </div>
-            <div class="contact-item">
-              <strong>E-Mail</strong>
-              <a href="mailto:info@gebaeudeservicelb.com">info@gebaeudeservicelb.com</a>
-            </div>
-            <div class="contact-item">
-              <strong>Adresse</strong>
-              <span class="num-normal">Karl-Leisner-Str. 2, 47623 Kevelaer</span>
-            </div>
+          <div class="contact-card">
+            <form action="https://formsubmit.co/info@gebaeudeservicelb.com" method="POST">
+              <input type="hidden" name="_captcha" value="false">
+              <input type="hidden" name="_subject" value="Neue Anfrage über die Website">
+              <input type="hidden" name="_template" value="table">
+
+              <div class="form-grid">
+                <div class="field">
+                  <label for="name">Name</label>
+                  <input id="name" name="Name" type="text" placeholder="Name" required>
+                </div>
+                <div class="field">
+                  <label for="phone">Telefonnummer</label>
+                  <input id="phone" name="Telefon" type="tel" placeholder="Telefonnummer" required>
+                </div>
+                <div class="field">
+                  <label for="email">E-Mail</label>
+                  <input id="email" name="E-Mail" type="email" placeholder="E-Mail" required>
+                </div>
+                <div class="field">
+                  <label for="service">Dienstleistung</label>
+                  <select id="service" name="Dienstleistung" required>
+                    <option value="" selected disabled>Bitte auswählen</option>
+                    <option>Büroreinigung</option>
+                    <option>Glasreinigung</option>
+                    <option>Treppenhausreinigung</option>
+                    <option>Facility Management</option>
+                    <option>Gartenpflege</option>
+                    <option>Individuelle Anfrage</option>
+                  </select>
+                </div>
+                <div class="field">
+                  <label for="interval">Turnus</label>
+                  <select id="interval" name="Turnus">
+                    <option value="" selected disabled>Bitte auswählen</option>
+                    <option>Einmalig</option>
+                    <option>Wöchentlich</option>
+                    <option>14-tägig</option>
+                    <option>Monatlich</option>
+                    <option>Individuell</option>
+                  </select>
+                </div>
+                <div class="field">
+                  <label for="object">Objekt / Ort</label>
+                  <input id="object" name="Objekt" type="text" placeholder="Objekt / Ort">
+                </div>
+                <div class="field full">
+                  <label for="message">Nachricht</label>
+                  <textarea id="message" name="Nachricht" placeholder="Nachricht"></textarea>
+                </div>
+              </div>
+
+              <div style="margin-top:16px">
+                <button class="btn btn-primary" type="submit">Anfrage senden</button>
+              </div>
+            </form>
           </div>
         </div>
 
-        <div class="contact-card">
-          <form action="https://formsubmit.co/info@gebaeudeservicelb.com" method="POST">
-            <input type="hidden" name="_captcha" value="false">
-            <input type="hidden" name="_subject" value="Neue Anfrage über die Website">
-            <input type="hidden" name="_template" value="table">
-
-            <div class="form-grid">
-              <div class="field">
-                <label for="name">Name</label>
-                <input id="name" name="Name" type="text" placeholder="Name" required>
-              </div>
-              <div class="field">
-                <label for="phone">Telefonnummer</label>
-                <input id="phone" name="Telefon" type="tel" placeholder="Telefonnummer" required>
-              </div>
-              <div class="field">
-                <label for="email">E-Mail</label>
-                <input id="email" name="E-Mail" type="email" placeholder="E-Mail" required>
-              </div>
-              <div class="field">
-                <label for="service">Dienstleistung</label>
-                <select id="service" name="Dienstleistung" required>
-                  <option value="" selected disabled>Bitte auswählen</option>
-                  <option>Büroreinigung</option>
-                  <option>Glasreinigung</option>
-                  <option>Treppenhausreinigung</option>
-                  <option>Facility Management</option>
-                  <option>Gartenpflege</option>
-                  <option>Individuelle Anfrage</option>
-                </select>
-              </div>
-              <div class="field">
-                <label for="interval">Turnus</label>
-                <select id="interval" name="Turnus">
-                  <option value="" selected disabled>Bitte auswählen</option>
-                  <option>Einmalig</option>
-                  <option>Wöchentlich</option>
-                  <option>14-tägig</option>
-                  <option>Monatlich</option>
-                  <option>Individuell</option>
-                </select>
-              </div>
-              <div class="field">
-                <label for="object">Objekt / Ort</label>
-                <input id="object" name="Objekt" type="text" placeholder="Objekt / Ort">
-              </div>
-              <div class="field full">
-                <label for="message">Nachricht</label>
-                <textarea id="message" name="Nachricht" placeholder="Nachricht"></textarea>
-              </div>
+        <div class="contact-map-merged reveal">
+          <section class="map-section" aria-label="Standort auf der Karte">
+            <div class="section-head">
+              <h2>Unser Standort</h2>
+              <p>Sie finden uns in Kevelaer. Nutzen Sie die Karte für eine schnelle Orientierung.</p>
             </div>
-
-            <div style="margin-top:16px">
-              <button class="btn btn-primary" type="submit">Anfrage senden</button>
+            <div class="map-shell">
+              <iframe
+                src="https://www.google.com/maps?q=Karl-Leisner-Str.%202,%2047623%20Kevelaer&z=15&output=embed"
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                allowfullscreen
+                title="Karte von Karl-Leisner-Str. 2, 47623 Kevelaer">
+              </iframe>
             </div>
-          </form>
+          </section>
         </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
 
   <div class="service-modal" id="serviceModal" aria-hidden="true">
@@ -2457,24 +2613,6 @@
       </div>
     </div>
   </div>
-
-  <section class="map-section reveal" aria-label="Standort auf der Karte">
-    <div class="container">
-      <div class="section-head">
-        <h2>Unser Standort</h2>
-        <p>Sie finden uns in Kevelaer. Nutzen Sie die Karte für eine schnelle Orientierung.</p>
-      </div>
-      <div class="map-shell">
-        <iframe
-          src="https://www.google.com/maps?q=Karl-Leisner-Str.%202,%2047623%20Kevelaer&z=15&output=embed"
-          loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"
-          allowfullscreen
-          title="Karte von Karl-Leisner-Str. 2, 47623 Kevelaer">
-        </iframe>
-      </div>
-    </div>
-  </section>
 
   <footer>
     <div class="container">
