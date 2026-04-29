@@ -2729,6 +2729,30 @@ img, video, iframe{
   }
 }
 
+
+
+/* FINAL DESKTOP/LAPTOP FIX: show banner image bigger and not cropped */
+@media (min-width:781px){
+  .highlight-summary{
+    margin-top:24px !important;
+    overflow:visible !important;
+  }
+  .individual-hero-banner{
+    min-height:660px !important;
+    padding:72px 32px 150px !important;
+    background-image:
+      linear-gradient(rgba(47,93,204,.22), rgba(47,93,204,.22)),
+      url("hero-bg.jpg") !important;
+    background-size:100% auto !important;
+    background-position:center top !important;
+    background-repeat:no-repeat !important;
+    background-color:#2f5dcc !important;
+  }
+  .individual-hero-banner h3{
+    transform:translateY(42px) !important;
+  }
+}
+
 </style>
 
   <!-- Favicon -->
