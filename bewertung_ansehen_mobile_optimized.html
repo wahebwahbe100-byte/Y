@@ -181,6 +181,24 @@
       background:radial-gradient(circle at top right, rgba(47,93,204,.10), transparent 34%);
       pointer-events:none;
     }
+
+    .review-image{
+      position:relative;
+      z-index:1;
+      width:100%;
+      height:170px;
+      border-radius:24px;
+      overflow:hidden;
+      margin-bottom:20px;
+      background:linear-gradient(135deg,rgba(47,93,204,.10),rgba(255,255,255,.65));
+      border:1px solid rgba(47,93,204,.10);
+      box-shadow:0 14px 28px rgba(15,23,42,.08);
+    }
+    .review-image img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+    }
     .review-top{position:relative;z-index:1;display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:18px}
     .review-name{font-size:28px;font-weight:800;letter-spacing:-.03em}
     .review-stars{font-size:20px;color:#f0ba2f;letter-spacing:3px;white-space:nowrap}
@@ -339,6 +357,11 @@
         padding:22px 18px;
         border-radius:24px;
       }
+      .review-image{
+        height:150px;
+        border-radius:20px;
+        margin-bottom:16px;
+      }
       .review-top{
         align-items:flex-start;
         flex-direction:column;
@@ -432,6 +455,41 @@
       </div>
 
       <div class="reviews-grid">
+
+
+        <article class="review-card">
+          <div class="review-image">
+            <img src="images/edeka.png" alt="Edeka Center Bild">
+          </div>
+          <div class="review-top">
+            <div class="review-name">Edeka Center</div>
+            <div class="review-stars">★★★★★</div>
+          </div>
+          <p>Zuverlässige Reinigung mit Blick fürs Detail – saubere Verkaufsflächen und ein gepflegter Eindruck für Kundinnen und Kunden.</p>
+        </article>
+
+        <article class="review-card">
+          <div class="review-image">
+            <img src="images/cleverfit.png" alt="Cleverfit Bild">
+          </div>
+          <div class="review-top">
+            <div class="review-name">Cleverfit</div>
+            <div class="review-stars">★★★★★</div>
+          </div>
+          <p>Professionelle Reinigung für Trainingsbereiche, Umkleiden und stark genutzte Flächen. Sauber, flexibel und zuverlässig.</p>
+        </article>
+
+        <article class="review-card">
+          <div class="review-image">
+            <img src="images/mediwax.png" alt="Mediwax GmbH Bild">
+          </div>
+          <div class="review-top">
+            <div class="review-name">Mediwax GmbH</div>
+            <div class="review-stars">★★★★★</div>
+          </div>
+          <p>Gründliche Betreuung unserer Räume und eine sehr gute Kommunikation. Das Ergebnis ist konstant sauber und professionell.</p>
+        </article>
+
         <article class="review-card">
           <div class="review-top">
             <div class="review-name">Glaser</div>
