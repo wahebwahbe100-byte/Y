@@ -2762,7 +2762,71 @@ img, video, iframe{
   }
 }
 
-</style>
+
+
+/* === TRUSTED LOGO PLACES IN REVIEWS === */
+.trusted-logos{
+  width:min(100%, 620px);
+  margin:0 auto 34px;
+  display:grid;
+  grid-template-columns:repeat(2, minmax(0, 1fr));
+  gap:18px;
+  position:relative;
+  z-index:2;
+}
+.trusted-logo-card{
+  min-height:106px;
+  padding:18px 20px;
+  border-radius:24px;
+  background:rgba(255,255,255,.10);
+  border:1px solid rgba(255,255,255,.18);
+  box-shadow:0 14px 30px rgba(15,23,42,.12);
+  backdrop-filter:blur(8px);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+}
+.trusted-logo-card img{
+  max-width:100%;
+  max-height:68px;
+  object-fit:contain;
+}
+.trusted-logo-label{
+  display:none;
+  color:#fff;
+  font-size:17px;
+  font-weight:800;
+  line-height:1.4;
+}
+.trusted-logo-card img[src=""],
+.trusted-logo-card img:not([src]){
+  display:none;
+}
+.trusted-logo-card img[src=""] + .trusted-logo-label,
+.trusted-logo-card img:not([src]) + .trusted-logo-label{
+  display:block;
+}
+@media (max-width:780px){
+  .trusted-logos{
+    width:min(100%, 420px);
+    margin-bottom:26px;
+    gap:12px;
+  }
+  .trusted-logo-card{
+    min-height:88px;
+    padding:14px;
+    border-radius:18px;
+  }
+  .trusted-logo-card img{
+    max-height:54px;
+  }
+  .trusted-logo-label{
+    font-size:14px;
+  }
+}
+
+  </style>
 
   <!-- Favicon -->
   <link rel="icon" href="favicon.ico" sizes="any">
@@ -2853,6 +2917,17 @@ img, video, iframe{
       <div class="section-head">
         <h2>Kundenbewertungen</h2>
         <p>Einige Rückmeldungen unserer Kundinnen und Kunden – freundlich, ehrlich und direkt aus dem Alltag.</p>
+      </div>
+
+      <div class="trusted-logos" aria-label="Vertrauenslogos">
+        <div class="trusted-logo-card">
+          <img src="trusted-logo-1.png" alt="Vertrauenslogo 1" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+          <span class="trusted-logo-label">Logo 1 hier einfügen</span>
+        </div>
+        <div class="trusted-logo-card">
+          <img src="trusted-logo-2.png" alt="Vertrauenslogo 2" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+          <span class="trusted-logo-label">Logo 2 hier einfügen</span>
+        </div>
       </div>
 
       <div class="reviews-shell">
