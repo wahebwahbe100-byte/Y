@@ -2826,7 +2826,1003 @@ img, video, iframe{
   }
 }
 
-  </style>
+  
+
+/* === FAQ SECTION REPLACES MAP === */
+.faq-merged{
+  padding:34px !important;
+}
+.faq-section{
+  position:relative;
+  margin:0;
+  padding:0;
+}
+.faq-section .section-head{
+  margin:0 0 26px !important;
+  text-align:left;
+  max-width:none;
+}
+.faq-section .section-head h2{
+  color:#16213a !important;
+  text-shadow:none !important;
+}
+.faq-section .section-head p{
+  color:#4b5567 !important;
+  text-shadow:none !important;
+}
+.faq-list{
+  display:grid;
+  gap:14px;
+}
+.faq-item{
+  background:#ffffff;
+  border:1px solid rgba(47,93,204,.14);
+  border-radius:22px;
+  box-shadow:0 12px 26px rgba(15,23,42,.08);
+  overflow:hidden;
+}
+.faq-item summary{
+  list-style:none;
+  min-height:68px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:18px;
+  padding:18px 22px;
+  color:#16213a;
+  font-size:20px;
+  font-weight:800;
+  cursor:pointer;
+}
+.faq-item summary::-webkit-details-marker{
+  display:none;
+}
+.faq-item summary::after{
+  content:"+";
+  width:38px;
+  height:38px;
+  min-width:38px;
+  border-radius:50%;
+  display:grid;
+  place-items:center;
+  background:rgba(47,93,204,.10);
+  color:#2f5dcc;
+  font-size:28px;
+  line-height:1;
+  transition:transform .25s ease, background .25s ease, color .25s ease;
+}
+.faq-item[open] summary::after{
+  content:"−";
+  background:#2f5dcc;
+  color:#ffffff;
+  transform:rotate(180deg);
+}
+.faq-item p{
+  margin:0;
+  padding:0 22px 22px;
+  color:#4b5567;
+  font-size:17px;
+  line-height:1.85;
+}
+footer{
+  margin-top:0 !important;
+  padding-top:50px !important;
+}
+footer .footer-shell{
+  border-radius:28px !important;
+}
+@media (max-width:780px){
+  .faq-merged{
+    padding:18px !important;
+    border-radius:24px !important;
+  }
+  .faq-section .section-head{
+    text-align:center;
+    margin-bottom:18px !important;
+  }
+  .faq-item{
+    border-radius:18px;
+  }
+  .faq-item summary{
+    min-height:62px;
+    padding:16px;
+    font-size:18px;
+  }
+  .faq-item summary::after{
+    width:34px;
+    height:34px;
+    min-width:34px;
+    font-size:25px;
+  }
+  .faq-item p{
+    padding:0 16px 18px;
+    font-size:16px;
+  }
+  footer{
+    margin-top:0 !important;
+    padding-top:36px !important;
+  }
+  footer .footer-shell{
+    border-radius:22px !important;
+  }
+}
+
+
+/* === FIX: remove white space after FAQ / before footer === */
+.contact-map-merged,
+.contact-map-merged.faq-section,
+.merged-contact-section .contact-map-merged{
+  margin-bottom:0 !important;
+  padding-bottom:28px !important;
+}
+
+.map-section,
+.merged-contact-section .map-section{
+  display:none !important;
+  margin:0 !important;
+  padding:0 !important;
+  height:0 !important;
+}
+
+footer{
+  margin-top:0 !important;
+  padding-top:28px !important;
+}
+@media (max-width:780px){
+  .contact-map-merged,
+  .contact-map-merged.faq-section,
+  .merged-contact-section .contact-map-merged{
+    padding-bottom:18px !important;
+  }
+  footer{
+    margin-top:0 !important;
+    padding-top:24px !important;
+  }
+}
+
+
+/* === FINAL COMPLETE FIX: remove the white gap between FAQ and footer === */
+#reinigungskonzept.highlight-services,
+section#reinigungskonzept.highlight-services{
+  padding-bottom:0 !important;
+  margin-bottom:0 !important;
+}
+
+#reinigungskonzept > .container,
+#reinigungskonzept .highlight-summary,
+#reinigungskonzept .merged-contact-section{
+  padding-bottom:0 !important;
+  margin-bottom:0 !important;
+}
+
+#reinigungskonzept .faq-merged{
+  margin-top:28px !important;
+  margin-bottom:0 !important;
+  padding:34px !important;
+  border-radius:38px !important;
+  background:linear-gradient(180deg, rgba(255,255,255,.32) 0%, rgba(255,255,255,.72) 100%) !important;
+  border:1px solid rgba(255,255,255,.30) !important;
+  box-shadow:0 22px 48px rgba(15,23,42,.10) !important;
+  backdrop-filter:blur(10px) !important;
+}
+
+#reinigungskonzept .faq-section{
+  margin:0 !important;
+  padding:0 !important;
+}
+
+#reinigungskonzept .map-section,
+#reinigungskonzept .map-shell,
+#reinigungskonzept iframe{
+  display:none !important;
+  height:0 !important;
+  margin:0 !important;
+  padding:0 !important;
+}
+
+footer{
+  margin-top:0 !important;
+  padding-top:0 !important;
+}
+
+footer .footer-shell{
+  border-radius:28px !important;
+}
+
+@media (max-width:780px){
+  #reinigungskonzept.highlight-services,
+  section#reinigungskonzept.highlight-services{
+    padding-bottom:0 !important;
+    margin-bottom:0 !important;
+  }
+
+  #reinigungskonzept .faq-merged{
+    margin-top:18px !important;
+    margin-bottom:0 !important;
+    padding:18px !important;
+    border-radius:24px !important;
+  }
+
+  footer{
+    margin-top:0 !important;
+    padding-top:0 !important;
+  }
+
+  footer .footer-shell{
+    border-radius:22px !important;
+  }
+}
+
+
+/* === CTA under FAQ === */
+.faq-cta{
+  margin-top:22px;
+  padding:28px;
+  border-radius:26px;
+  background:linear-gradient(135deg,#16213a 0%, #2448a6 58%, #2f5dcc 100%);
+  color:#ffffff;
+  text-align:center;
+  box-shadow:0 16px 36px rgba(15,23,42,.12);
+}
+.faq-cta h3{
+  margin:0 0 10px;
+  font-size:clamp(28px,4vw,42px);
+  line-height:1.05;
+  letter-spacing:-.04em;
+  color:#ffffff;
+}
+.faq-cta p{
+  margin:0 auto 20px;
+  max-width:680px;
+  color:rgba(255,255,255,.88);
+  font-size:18px;
+  line-height:1.8;
+}
+.faq-cta-actions{
+  display:flex;
+  justify-content:center;
+  gap:12px;
+  flex-wrap:wrap;
+}
+.faq-cta-actions .btn{
+  min-height:54px;
+}
+.faq-cta-actions .btn-light{
+  background:#ffffff;
+  color:#23469d;
+}
+@media (max-width:780px){
+  .faq-cta{
+    margin-top:18px;
+    padding:24px 16px;
+    border-radius:22px;
+  }
+  .faq-cta p{
+    font-size:16px;
+  }
+  .faq-cta-actions{
+    display:grid;
+    grid-template-columns:1fr;
+  }
+  .faq-cta-actions .btn{
+    width:100%;
+  }
+}
+
+
+/* === FINAL PROFESSIONAL CTA CARD LIKE REFERENCE === */
+.final-contact-cta{
+  margin-top:26px;
+  overflow:hidden;
+  border-radius:28px;
+  background:#ffffff;
+  border:1px solid rgba(47,93,204,.14);
+  box-shadow:0 22px 55px rgba(15,23,42,.12);
+  display:grid;
+  grid-template-columns:1.45fr .9fr;
+  min-height:330px;
+}
+
+.final-contact-cta-left{
+  position:relative;
+  padding:54px 48px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  overflow:hidden;
+  background:
+    linear-gradient(90deg, rgba(255,255,255,.96) 0%, rgba(255,255,255,.82) 50%, rgba(255,255,255,.20) 100%),
+    url("hero-bg.jpg") center/cover no-repeat;
+}
+
+.final-contact-cta-left::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:radial-gradient(circle at bottom left, rgba(47,93,204,.13), transparent 42%);
+  pointer-events:none;
+}
+
+.final-contact-cta-content{
+  position:relative;
+  z-index:2;
+  max-width:650px;
+}
+
+.final-contact-kicker{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  margin-bottom:16px;
+  color:#344054;
+  font-size:14px;
+  font-weight:900;
+  letter-spacing:.18em;
+  text-transform:uppercase;
+}
+
+.final-contact-cta h3{
+  margin:0 0 18px;
+  color:#071a44;
+  font-size:clamp(34px,4.6vw,56px);
+  line-height:.96;
+  letter-spacing:-.055em;
+  font-weight:800;
+}
+
+.final-contact-cta p{
+  margin:0 0 16px;
+  max-width:620px;
+  color:#445066;
+  font-size:18px;
+  line-height:1.85;
+  font-weight:600;
+}
+
+.final-contact-cta-note{
+  margin-top:6px !important;
+  color:#657082 !important;
+  font-size:16px !important;
+}
+
+.final-contact-cta-right{
+  padding:54px 44px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  background:rgba(255,255,255,.94);
+  border-left:1px solid rgba(47,93,204,.10);
+}
+
+.final-contact-cta-right h4{
+  margin:0 0 22px;
+  color:#071a44;
+  font-size:34px;
+  line-height:1;
+  letter-spacing:.10em;
+  text-transform:uppercase;
+  font-style:italic;
+}
+
+.final-contact-line{
+  display:flex;
+  align-items:center;
+  gap:14px;
+  margin-bottom:14px;
+  color:#344054;
+  font-size:18px;
+  font-weight:800;
+}
+
+.final-contact-line span{
+  width:26px;
+  min-width:26px;
+  height:26px;
+  display:grid;
+  place-items:center;
+  color:#2f5dcc;
+  font-size:18px;
+}
+
+.final-contact-main-btn{
+  width:100%;
+  margin-top:22px;
+  min-height:62px;
+  border-radius:14px;
+  background:#0b73d9;
+  color:#ffffff;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  font-size:19px;
+  font-weight:900;
+  box-shadow:0 16px 32px rgba(11,115,217,.22);
+  transition:transform .25s ease, background .25s ease, box-shadow .25s ease;
+}
+
+.final-contact-main-btn:hover{
+  transform:translateY(-2px);
+  background:#075fb7;
+  box-shadow:0 20px 38px rgba(11,115,217,.28);
+}
+
+.final-contact-mini-actions{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:10px;
+  margin-top:12px;
+}
+
+.final-contact-mini-actions a{
+  min-height:46px;
+  border-radius:12px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:#eef4ff;
+  color:#23469d;
+  font-weight:900;
+  font-size:15px;
+}
+
+@media (max-width:900px){
+  .final-contact-cta{
+    grid-template-columns:1fr;
+  }
+  .final-contact-cta-left{
+    padding:42px 28px;
+    min-height:300px;
+  }
+  .final-contact-cta-right{
+    padding:34px 28px;
+    border-left:0;
+    border-top:1px solid rgba(47,93,204,.10);
+  }
+}
+
+@media (max-width:780px){
+  .final-contact-cta{
+    margin-top:18px;
+    border-radius:24px;
+  }
+  .final-contact-cta-left{
+    padding:34px 20px;
+    background:
+      linear-gradient(180deg, rgba(255,255,255,.97) 0%, rgba(255,255,255,.88) 58%, rgba(255,255,255,.72) 100%),
+      url("hero-bg.jpg") center/cover no-repeat;
+  }
+  .final-contact-kicker{
+    font-size:12px;
+  }
+  .final-contact-cta h3{
+    font-size:clamp(34px,10vw,48px);
+  }
+  .final-contact-cta p{
+    font-size:16px;
+  }
+  .final-contact-cta-right{
+    padding:28px 20px;
+  }
+  .final-contact-cta-right h4{
+    font-size:28px;
+    text-align:center;
+  }
+  .final-contact-line{
+    justify-content:center;
+    font-size:17px;
+  }
+  .final-contact-mini-actions{
+    grid-template-columns:1fr;
+  }
+}
+
+
+/* === COMPACT CTA CARD - only one contact button === */
+.final-contact-cta{
+  width:min(100%, 980px) !important;
+  margin:24px auto 0 !important;
+  overflow:hidden !important;
+  border-radius:24px !important;
+  background:#ffffff !important;
+  border:1px solid rgba(47,93,204,.14) !important;
+  box-shadow:0 18px 45px rgba(15,23,42,.10) !important;
+  display:grid !important;
+  grid-template-columns:1.55fr .75fr !important;
+  min-height:245px !important;
+}
+
+.final-contact-cta-left{
+  position:relative !important;
+  padding:34px 36px !important;
+  display:flex !important;
+  flex-direction:column !important;
+  justify-content:center !important;
+  overflow:hidden !important;
+  background:
+    linear-gradient(90deg, rgba(255,255,255,.96) 0%, rgba(255,255,255,.84) 54%, rgba(255,255,255,.28) 100%),
+    url("hero-bg.jpg") center/cover no-repeat !important;
+}
+
+.final-contact-cta-content{
+  position:relative !important;
+  z-index:2 !important;
+  max-width:560px !important;
+}
+
+.final-contact-kicker{
+  display:inline-flex !important;
+  margin-bottom:12px !important;
+  color:#344054 !important;
+  font-size:12px !important;
+  font-weight:900 !important;
+  letter-spacing:.18em !important;
+  text-transform:uppercase !important;
+}
+
+.final-contact-cta h3{
+  margin:0 0 14px !important;
+  color:#071a44 !important;
+  font-size:clamp(30px,3.8vw,44px) !important;
+  line-height:.98 !important;
+  letter-spacing:-.055em !important;
+  font-weight:800 !important;
+}
+
+.final-contact-cta p{
+  margin:0 0 10px !important;
+  max-width:540px !important;
+  color:#445066 !important;
+  font-size:15.5px !important;
+  line-height:1.75 !important;
+  font-weight:600 !important;
+}
+
+.final-contact-cta-note{
+  color:#657082 !important;
+  font-size:14.5px !important;
+}
+
+.final-contact-cta-right{
+  padding:34px 30px !important;
+  display:flex !important;
+  flex-direction:column !important;
+  justify-content:center !important;
+  background:rgba(255,255,255,.96) !important;
+  border-left:1px solid rgba(47,93,204,.10) !important;
+}
+
+.final-contact-cta-right h4{
+  margin:0 0 18px !important;
+  color:#071a44 !important;
+  font-size:28px !important;
+  line-height:1 !important;
+  letter-spacing:.10em !important;
+  text-transform:uppercase !important;
+  font-style:italic !important;
+}
+
+.final-contact-line{
+  display:flex !important;
+  align-items:center !important;
+  gap:11px !important;
+  margin-bottom:11px !important;
+  color:#344054 !important;
+  font-size:16px !important;
+  font-weight:800 !important;
+}
+
+.final-contact-line span{
+  width:22px !important;
+  min-width:22px !important;
+  height:22px !important;
+  display:grid !important;
+  place-items:center !important;
+  color:#2f5dcc !important;
+  font-size:16px !important;
+}
+
+.final-contact-main-btn{
+  width:100% !important;
+  margin-top:18px !important;
+  min-height:52px !important;
+  border-radius:13px !important;
+  background:#0b73d9 !important;
+  color:#ffffff !important;
+  display:inline-flex !important;
+  align-items:center !important;
+  justify-content:center !important;
+  font-size:17px !important;
+  font-weight:900 !important;
+  box-shadow:0 14px 28px rgba(11,115,217,.20) !important;
+}
+
+.final-contact-mini-actions{
+  display:none !important;
+}
+
+@media (max-width:900px){
+  .final-contact-cta{
+    grid-template-columns:1fr !important;
+    max-width:680px !important;
+  }
+  .final-contact-cta-left{
+    padding:32px 24px !important;
+    min-height:230px !important;
+  }
+  .final-contact-cta-right{
+    padding:28px 24px !important;
+    border-left:0 !important;
+    border-top:1px solid rgba(47,93,204,.10) !important;
+  }
+}
+
+@media (max-width:780px){
+  .final-contact-cta{
+    margin-top:18px !important;
+    border-radius:22px !important;
+  }
+  .final-contact-cta-left{
+    padding:28px 18px !important;
+    background:
+      linear-gradient(180deg, rgba(255,255,255,.97) 0%, rgba(255,255,255,.90) 58%, rgba(255,255,255,.76) 100%),
+      url("hero-bg.jpg") center/cover no-repeat !important;
+  }
+  .final-contact-cta h3{
+    font-size:clamp(30px,9vw,42px) !important;
+  }
+  .final-contact-cta p{
+    font-size:15px !important;
+  }
+  .final-contact-cta-right{
+    padding:24px 18px !important;
+  }
+  .final-contact-cta-right h4{
+    font-size:26px !important;
+    text-align:center !important;
+  }
+  .final-contact-line{
+    justify-content:center !important;
+    font-size:15px !important;
+  }
+}
+
+
+/* === Separate Kontakt page cleanup === */
+#reinigungskonzept .merged-contact-section{
+  margin-top:42px !important;
+}
+#reinigungskonzept .faq-merged{
+  margin-top:0 !important;
+}
+
+
+/* === FINAL FOOTER LIKE REFERENCE DESIGN === */
+footer.site-footer,
+footer{
+  margin-top:0 !important;
+  padding:72px 0 30px !important;
+  background:#061a49 !important;
+  color:#ffffff !important;
+  position:relative !important;
+  overflow:hidden !important;
+}
+
+footer.site-footer::before,
+footer::before{
+  content:"" !important;
+  position:absolute !important;
+  inset:0 !important;
+  background:
+    linear-gradient(90deg, rgba(255,255,255,.025) 0 1px, transparent 1px),
+    radial-gradient(circle at top center, rgba(255,255,255,.08), transparent 36%) !important;
+  background-size:280px 100%, auto !important;
+  pointer-events:none !important;
+}
+
+.site-footer .footer-shell{
+  position:relative !important;
+  z-index:2 !important;
+  display:block !important;
+  padding:0 !important;
+  border-radius:0 !important;
+  background:transparent !important;
+  border:0 !important;
+  box-shadow:none !important;
+  backdrop-filter:none !important;
+}
+
+.footer-reference-grid{
+  display:grid !important;
+  grid-template-columns:1.45fr .85fr 1.05fr .95fr !important;
+  gap:58px !important;
+  align-items:start !important;
+  width:min(100%, 1080px) !important;
+  margin:0 auto !important;
+}
+
+.footer-reference-logo{
+  width:150px !important;
+  height:96px !important;
+  border-radius:20px !important;
+  background:#ffffff !important;
+  display:flex !important;
+  align-items:center !important;
+  justify-content:center !important;
+  box-shadow:0 16px 34px rgba(0,0,0,.18) !important;
+  margin-bottom:20px !important;
+}
+
+.footer-reference-logo img{
+  width:92px !important;
+  height:auto !important;
+  object-fit:contain !important;
+  display:block !important;
+}
+
+.footer-reference-brand p{
+  max-width:330px !important;
+  margin:0 !important;
+  color:rgba(255,255,255,.82) !important;
+  font-size:18px !important;
+  line-height:1.65 !important;
+  font-weight:700 !important;
+}
+
+.footer-reference-title{
+  display:block !important;
+  margin:4px 0 20px !important;
+  color:#ffffff !important;
+  font-family:"Playfair Display",serif !important;
+  font-size:19px !important;
+  line-height:1.1 !important;
+  font-style:italic !important;
+  font-weight:800 !important;
+  letter-spacing:-.02em !important;
+}
+
+.footer-reference-links{
+  display:grid !important;
+  gap:12px !important;
+}
+
+.footer-reference-links a,
+.footer-reference-links span{
+  display:block !important;
+  color:rgba(255,255,255,.78) !important;
+  font-size:16px !important;
+  line-height:1.35 !important;
+  font-weight:650 !important;
+  transition:color .22s ease, transform .22s ease !important;
+}
+
+.footer-reference-links a:hover{
+  color:#ffffff !important;
+  transform:translateX(3px) !important;
+}
+
+.footer-reference-divider{
+  width:min(100%, 1080px) !important;
+  height:1px !important;
+  margin:44px auto 24px !important;
+  background:rgba(255,255,255,.12) !important;
+}
+
+.footer-reference-bottom{
+  width:min(100%, 1080px) !important;
+  margin:0 auto !important;
+  display:flex !important;
+  flex-direction:column !important;
+  align-items:center !important;
+  justify-content:center !important;
+  gap:14px !important;
+  text-align:center !important;
+}
+
+.footer-reference-bottom p{
+  margin:0 !important;
+  color:rgba(255,255,255,.62) !important;
+  font-size:15px !important;
+  font-weight:700 !important;
+}
+
+.footer-reference-legal{
+  display:flex !important;
+  gap:26px !important;
+  flex-wrap:wrap !important;
+  align-items:center !important;
+  justify-content:center !important;
+}
+
+.footer-reference-legal a,
+.footer-reference-legal span{
+  color:rgba(255,255,255,.88) !important;
+  font-size:15px !important;
+  font-weight:800 !important;
+}
+
+.footer-reference-legal a:hover{
+  color:#ffffff !important;
+}
+
+@media (max-width:980px){
+  .footer-reference-grid{
+    grid-template-columns:1fr 1fr !important;
+    gap:36px !important;
+  }
+}
+
+@media (max-width:780px){
+  footer.site-footer,
+  footer{
+    padding:48px 0 26px !important;
+  }
+
+  .footer-reference-grid{
+    grid-template-columns:1fr !important;
+    gap:28px !important;
+  }
+
+  .footer-reference-logo{
+    width:136px !important;
+    height:90px !important;
+  }
+
+  .footer-reference-brand p{
+    max-width:none !important;
+    font-size:16px !important;
+  }
+
+  .footer-reference-title{
+    margin:0 0 12px !important;
+    font-size:18px !important;
+  }
+
+  .footer-reference-links{
+    gap:9px !important;
+  }
+
+  .footer-reference-links a,
+  .footer-reference-links span{
+    font-size:15px !important;
+  }
+
+  .footer-reference-divider{
+    margin:32px auto 20px !important;
+  }
+}
+
+
+/* === FONT RESTORE: same font style as before === */
+footer,
+footer *{
+  font-family:"Playfair Display",serif !important;
+}
+
+.footer-reference-title{
+  font-style:normal !important;
+  letter-spacing:normal !important;
+  font-weight:800 !important;
+}
+
+.footer-reference-links a,
+.footer-reference-links span,
+.footer-reference-brand p,
+.footer-reference-bottom p,
+.footer-reference-legal a,
+.footer-reference-legal span{
+  font-style:normal !important;
+  letter-spacing:normal !important;
+}
+
+
+/* === FOOTER COMPACT HEIGHT FIX === */
+footer.site-footer,
+footer{
+  padding:38px 0 18px !important;
+}
+
+.footer-reference-grid{
+  gap:34px !important;
+}
+
+.footer-reference-logo{
+  width:118px !important;
+  height:72px !important;
+  border-radius:16px !important;
+  margin-bottom:12px !important;
+}
+
+.footer-reference-logo img{
+  width:72px !important;
+}
+
+.footer-reference-brand p{
+  font-size:15px !important;
+  line-height:1.45 !important;
+  max-width:300px !important;
+}
+
+.footer-reference-title{
+  margin:0 0 10px !important;
+  font-size:16px !important;
+  line-height:1.1 !important;
+}
+
+.footer-reference-links{
+  gap:7px !important;
+}
+
+.footer-reference-links a,
+.footer-reference-links span{
+  font-size:14px !important;
+  line-height:1.25 !important;
+}
+
+.footer-reference-divider{
+  margin:24px auto 14px !important;
+}
+
+.footer-reference-bottom{
+  gap:8px !important;
+}
+
+.footer-reference-bottom p{
+  font-size:13px !important;
+}
+
+.footer-reference-legal{
+  gap:18px !important;
+}
+
+.footer-reference-legal a,
+.footer-reference-legal span{
+  font-size:13px !important;
+}
+
+@media (max-width:780px){
+  footer.site-footer,
+  footer{
+    padding:32px 0 16px !important;
+  }
+
+  .footer-reference-grid{
+    gap:20px !important;
+  }
+
+  .footer-reference-logo{
+    width:106px !important;
+    height:66px !important;
+    margin-bottom:10px !important;
+  }
+
+  .footer-reference-logo img{
+    width:64px !important;
+  }
+
+  .footer-reference-brand p{
+    font-size:14px !important;
+  }
+
+  .footer-reference-title{
+    font-size:15px !important;
+    margin-bottom:8px !important;
+  }
+
+  .footer-reference-links{
+    gap:6px !important;
+  }
+
+  .footer-reference-links a,
+  .footer-reference-links span{
+    font-size:13.5px !important;
+  }
+
+  .footer-reference-divider{
+    margin:20px auto 12px !important;
+  }
+}
+
+</style>
 
   <!-- Favicon -->
   <link rel="icon" href="favicon.ico" sizes="any">
@@ -2884,8 +3880,8 @@ img, video, iframe{
         </div>
         <a class="link" href="#reinigungskonzept">Reinigungskonzept</a>
         <a class="link" href="wir-sind-ihr-verlaesslicher-partner-styled-subtle.html">Über uns</a>
-        <a class="link" href="#kontakt">Kontakt</a>
-        <a class="btn btn-primary" href="#kontakt">Angebot anfragen</a>
+        <a class="link" href="kontakt.html">Kontakt</a>
+        <a class="btn btn-primary" href="kontakt.html">Angebot anfragen</a>
       </nav>
     </div>
   </header>
@@ -2901,7 +3897,7 @@ img, video, iframe{
           <h1>Reinigung & Facility Management<br>mit Qualität und Zuverlässigkeit</h1>
           <p>Wir bieten professionelle Reinigung und umfassendes Facility Management für Wohnungen, Büros und Gebäude.</p>
           <div class="hero-actions">
-            <a href="#kontakt" class="btn btn-primary">Jetzt Angebot anfragen</a>
+            <a href="kontakt.html" class="btn btn-primary">Jetzt Angebot anfragen</a>
             <a href="#leistungen" class="btn btn-light">Unsere Leistungen</a>
           </div>
         </div>
@@ -3099,107 +4095,48 @@ img, video, iframe{
           <p>Bei saisonalen Einsätzen, stärker genutzten Bereichen oder neuen Anforderungen passen wir den Reinigungsservice unkompliziert an.</p>
         </div>
       </div>
-
-      <div id="kontakt" class="merged-contact-section reveal">
-        <div class="merged-contact-intro section-head">
-          <h2>Kontakt & Angebotsanfrage</h2>
-          <p>Teilen Sie uns Ihren Bedarf mit – wir melden uns persönlich mit einer passenden Lösung zurück.</p>
-        </div>
-
-        <div class="contact-shell reveal">
-          <div class="contact-card left">
-            <h3>Wir freuen uns auf Ihre Anfrage</h3>
-            <p>Ob Reinigung, Facility Management, Treppenhaus, Glasflächen oder Gartenpflege – wir beraten Sie persönlich und erstellen ein passendes Angebot.</p>
-            <div class="contact-list">
-              <div class="contact-item">
-                <strong>Telefon</strong>
-                <a href="tel:+4917610870618" class="num-normal">+49 176 10870618</a>
-              </div>
-              <div class="contact-item">
-                <strong>E-Mail</strong>
-                <a href="mailto:Info@gebaeudeserviceboehme.de">Info@gebaeudeserviceboehme.de</a>
-              </div>
-              <div class="contact-item">
-                <strong>Adresse</strong>
-                <span class="num-normal">Karl-Leisner-Str. 2, 47623 Kevelaer</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="contact-card">
-            <form action="https://formsubmit.co/Info@gebaeudeserviceboehme.de" method="POST">
-              <input type="hidden" name="_captcha" value="false">
-              <input type="hidden" name="_subject" value="Neue Anfrage über die Website">
-              <input type="hidden" name="_template" value="table">
-              <input type="hidden" name="_next" value="https://gebaeudeserviceboehme.de/danke.html">
-
-              <div class="form-grid">
-                <div class="field">
-                  <label for="name">Name</label>
-                  <input id="name" name="Name" type="text" placeholder="Name" required>
-                </div>
-                <div class="field">
-                  <label for="phone">Telefonnummer</label>
-                  <input id="phone" name="Telefon" type="tel" placeholder="Telefonnummer" required>
-                </div>
-                <div class="field">
-                  <label for="email">E-Mail</label>
-                  <input id="email" name="E-Mail" type="email" placeholder="E-Mail" required>
-                </div>
-                <div class="field">
-                  <label for="service">Dienstleistung</label>
-                  <select id="service" name="Dienstleistung" required>
-                    <option value="" selected disabled>Bitte auswählen</option>
-                    <option>Büroreinigung</option>
-                    <option>Glasreinigung</option>
-                    <option>Treppenhausreinigung</option>
-                    <option>Facility Management</option>
-                    <option>Gartenpflege</option>
-                    <option>Individuelle Anfrage</option>
-                  </select>
-                </div>
-                <div class="field">
-                  <label for="interval">Turnus</label>
-                  <select id="interval" name="Turnus">
-                    <option value="" selected disabled>Bitte auswählen</option>
-                    <option>Einmalig</option>
-                    <option>Wöchentlich</option>
-                    <option>14-tägig</option>
-                    <option>Monatlich</option>
-                    <option>Individuell</option>
-                  </select>
-                </div>
-                <div class="field">
-                  <label for="object">Objekt / Ort</label>
-                  <input id="object" name="Objekt" type="text" placeholder="Objekt / Ort">
-                </div>
-                <div class="field full">
-                  <label for="message">Nachricht</label>
-                  <textarea id="message" name="Nachricht" placeholder="Nachricht"></textarea>
-                </div>
-              </div>
-
-              <div style="margin-top:16px">
-                <button class="btn btn-primary" type="submit">Anfrage senden</button>
-              </div>
-            </form>
-          </div>
-        </div>
-
-        <div class="contact-map-merged reveal">
-          <section class="map-section" aria-label="Standort auf der Karte">
+      <div class="merged-contact-section reveal">
+        <div class="faq-merged reveal">
+          <section class="faq-section" aria-label="Häufige Fragen">
             <div class="section-head">
-              <h2>Unser Standort</h2>
-              <p>Sie finden uns in Kevelaer. Nutzen Sie die Karte für eine schnelle Orientierung.</p>
+              <h2>Häufige Fragen</h2>
+              <p>Hier finden Sie kurze Antworten auf die wichtigsten Fragen zu unseren Leistungen.</p>
             </div>
-            <div class="map-shell">
-              <iframe
-                src="https://www.google.com/maps?q=Karl-Leisner-Str.%202,%2047623%20Kevelaer&z=15&output=embed"
-                loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade"
-                allowfullscreen
-                title="Karte von Karl-Leisner-Str. 2, 47623 Kevelaer">
-              </iframe>
+            <div class="faq-list">
+              <details class="faq-item">
+                <summary>Welche Reinigungsleistungen bieten Sie an?</summary>
+                <p>Wir bieten Gebäudereinigung, Unterhaltsreinigung, Büroreinigung, Treppenhausreinigung sowie weitere individuelle Reinigungsservices nach Bedarf an.</p>
+              </details>
+              <details class="faq-item">
+                <summary>Kann ich ein individuelles Angebot erhalten?</summary>
+                <p>Ja. Schreiben Sie uns einfach über das Kontaktformular oder rufen Sie uns an. Wir erstellen ein passendes Angebot für Ihr Objekt und Ihren gewünschten Turnus.</p>
+              </details>
+              <details class="faq-item">
+                <summary>Arbeiten Sie auch regelmäßig, zum Beispiel wöchentlich?</summary>
+                <p>Ja. Wir übernehmen Reinigungen einmalig, wöchentlich, 14-tägig, monatlich oder in einem individuell vereinbarten Rhythmus.</p>
+              </details>
+              <details class="faq-item">
+                <summary>In welchem Gebiet sind Sie tätig?</summary>
+                <p>Wir sind in Kevelaer und Umgebung tätig. Für genaue Einsatzorte können Sie uns direkt kontaktieren.</p>
+              </details>
+            </div>
+
+            <div class="final-contact-cta">
+              <div class="final-contact-cta-left">
+                <div class="final-contact-cta-content">
+                  <span class="final-contact-kicker">Über uns</span>
+                  <h3>Gebäudeservice Böhme</h3>
+                  <p>Wir begleiten Privat- und Geschäftskunden mit zuverlässiger Reinigung, gepflegten Außenbereichen und einem Service, der zu Ihrem Objekt passt.</p>
+                  <p class="final-contact-cta-note">Unser Ziel ist eine Betreuung, die entlastet: transparent, gut organisiert und mit Blick auf langfristige Sauberkeit.</p>
+                </div>
+              </div>
+
+              <div class="final-contact-cta-right">
+                <h4>Kontakt</h4>
+                <a class="final-contact-line" href="tel:+4917610870618"><span>☎</span> +49 176 10870618</a>
+                <a class="final-contact-line" href="mailto:Info@gebaeudeserviceboehme.de"><span>✉</span> Info@gebaeudeserviceboehme.de</a>
+                <a class="final-contact-main-btn" href="kontakt.html">Jetzt kontaktieren →</a>
+              </div>
             </div>
           </section>
         </div>
@@ -3218,7 +4155,7 @@ img, video, iframe{
           <h3 id="modalTitle">Service</h3>
           <p id="modalLead">Details zu unserem Angebot.</p>
           <div class="modal-cta">
-            <a href="#kontakt" class="btn btn-primary" id="modalAction">Jetzt anfragen</a>
+            <a href="kontakt.html" class="btn btn-primary" id="modalAction">Jetzt anfragen</a>
             <a href="tel:+4917610870618" class="btn btn-light">Direkt anrufen</a>
           </div>
         </div>
@@ -3239,27 +4176,57 @@ img, video, iframe{
     </div>
   </div>
 
-  <footer>
+  <footer class="site-footer">
     <div class="container">
       <div class="footer-shell reveal">
-        <div class="footer-brand">
-          <strong>Gebäudeservice Böhme</strong>
-          <p>Reinigung & Facility Management, Hausmeisterservice und Gartenpflege in Kevelaer und Umgebung – zuverlässig, freundlich und flexibel für Privat- und Geschäftskunden.</p>
+        <div class="footer-reference-grid">
+          <div class="footer-reference-brand">
+            <a class="footer-reference-logo" href="#start" aria-label="Gebäudeservice Böhme Startseite">
+              <img src="logo.png" alt="Gebäudeservice Böhme Logo">
+            </a>
+            <p>Gebäudeservice Böhme – zuverlässig, transparent und persönlich.</p>
+          </div>
+
+          <div class="footer-reference-col">
+            <span class="footer-reference-title">Navigation</span>
+            <div class="footer-reference-links">
+              <a href="#start">Startseite</a>
+              <a href="#leistungen">Leistungen</a>
+              <a href="kontakt.html">Kontakt</a>
+              <a href="wir-sind-ihr-verlaesslicher-partner-styled-subtle.html">Über uns</a>
+            </div>
+          </div>
+
+          <div class="footer-reference-col">
+            <span class="footer-reference-title">Leistungen</span>
+            <div class="footer-reference-links">
+              <a href="wohnungsreinigung-complete.html">Wohnungsreinigung</a>
+              <a href="glasreinigung-complete.html">Glasreinigung</a>
+              <a href="treppenhausreinigung-complete.html">Treppenhausreinigung</a>
+              <a href="gartenpflege-complete.html">Gartenpflege</a>
+            </div>
+          </div>
+
+          <div class="footer-reference-col">
+            <span class="footer-reference-title">Kontakt</span>
+            <div class="footer-reference-links">
+              <a href="mailto:Info@gebaeudeserviceboehme.de">info@gebaeudeserviceboehme.de</a>
+              <a href="tel:+4917610870618" class="num-normal">+49 176 10870618</a>
+              <span>Karl-Leisner-Str. 2, 47623 Kevelaer</span>
+              <span>Impressum</span>
+              <a href="datenschutzerklarung_seite_mobile_edited.html">Datenschutz</a>
+            </div>
+          </div>
         </div>
 
-        <div class="footer-contact">
-          <span class="footer-title">Kontakt</span>
-          <a href="tel:+4917610870618" class="num-normal">+49 176 10870618</a>
-          <a href="mailto:Info@gebaeudeserviceboehme.de">Info@gebaeudeserviceboehme.de</a>
-          <span class="num-normal">Karl-Leisner-Str. 2, 47623 Kevelaer</span>
-          <a href="wir-sind-ihr-verlaesslicher-partner-styled-subtle.html">Über uns</a>
-          <a href="datenschutzerklarung_seite_mobile_edited.html">Datenschutzerklärung</a>
-        </div>
+        <div class="footer-reference-divider"></div>
 
-        <div class="footer-copy">
-          <span class="footer-title">Information</span>
-          <span>Erreichbar für Anfragen, Beratung und individuelle Angebote.</span>
-          <span class="num-normal">© 2026 · Alle Rechte vorbehalten</span>
+        <div class="footer-reference-bottom">
+          <p>© 2026 Gebäudeservice Böhme. Alle Rechte vorbehalten.</p>
+          <div class="footer-reference-legal">
+            <span>Impressum</span>
+            <a href="datenschutzerklarung_seite_mobile_edited.html">Datenschutz</a>
+          </div>
         </div>
       </div>
     </div>
