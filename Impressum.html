@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Impressum | Gebäudeservice Böhme</title>
+  <meta name="description" content="Impressum von Gebäudeservice Böhme.">
+  <style>
+    :root{
+      --bg:#f6f2ec;
+      --surface:#ffffff;
+      --text:#111827;
+      --muted:#5f6777;
+      --blue:#2f5dcc;
+      --blue-dark:#23469d;
+      --line:rgba(17,24,39,.08);
+      --shadow:0 16px 40px rgba(15,23,42,.10);
+      --container:1100px;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family:"Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      -webkit-font-smoothing:antialiased;
+      text-rendering:optimizeLegibility;
+      color:var(--text);
+      background:var(--bg);
+      line-height:1.8;
+    }
+    a{color:var(--blue);text-decoration:none}
+    a:hover{text-decoration:underline}
+    .container{width:min(92%, var(--container));margin:0 auto}
+    .topbar{
+      background:#16213a;
+      color:#fff;
+      font-size:14px;
+    }
+    .topbar .container{
+      min-height:42px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:12px;
+      flex-wrap:wrap;
+    }
+    header{
+      position:sticky;
+      top:0;
+      z-index:100;
+      background:rgba(255,255,255,.88);
+      backdrop-filter:blur(14px);
+      border-bottom:1px solid var(--line);
+    }
+    .nav{
+      min-height:82px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:20px;
+    }
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:14px;
+      color:inherit;
+    }
+    .brand-logo{
+      width:56px;
+      height:56px;
+      border-radius:50%;
+      overflow:hidden;
+      background:#fff;
+      box-shadow:0 12px 28px rgba(47,93,204,.18);
+      border:1px solid rgba(17,24,39,.08);
+      flex:0 0 56px;
+    }
+    .brand-logo img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+    .brand-title{
+      font-size:24px;
+      font-weight:800;
+      letter-spacing:-.02em;
+    }
+    .brand-sub{
+      font-size:12px;
+      color:var(--muted);
+      letter-spacing:.12em;
+      text-transform:uppercase;
+      margin-top:4px;
+    }
+    .nav-links{
+      display:flex;
+      align-items:center;
+      gap:18px;
+      flex-wrap:wrap;
+    }
+    .nav-links a.link{
+      font-weight:600;
+      color:#263247;
+    }
+    .nav-links a.link:hover{color:var(--blue)}
+    .btn{
+      min-height:50px;
+      padding:0 22px;
+      border-radius:999px;
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      border:1px solid transparent;
+      font-weight:700;
+      transition:.25s ease;
+    }
+    .btn-primary{
+      background:var(--blue);
+      color:#fff;
+      box-shadow:0 12px 28px rgba(47,93,204,.24);
+    }
+    .btn-primary:hover{
+      background:var(--blue-dark);
+      text-decoration:none;
+      transform:translateY(-1px);
+    }
+    .hero{
+      padding:70px 0 36px;
+      background:linear-gradient(180deg, rgba(47,93,204,.08), rgba(47,93,204,0));
+    }
+    .hero-card{
+      background:linear-gradient(135deg,#16213a,#2f5dcc);
+      color:#fff;
+      border-radius:34px;
+      padding:54px 40px;
+      box-shadow:var(--shadow);
+    }
+    .hero-card h1{
+      margin:0 0 14px;
+      font-size:clamp(34px,5vw,56px);
+      line-height:1.04;
+      letter-spacing:-.04em;
+    }
+    .hero-card p{
+      margin:0;
+      max-width:760px;
+      color:rgba(255,255,255,.86);
+      font-size:18px;
+      line-height:1.9;
+    }
+    .content{
+      padding:24px 0 80px;
+    }
+    .paper{
+      background:var(--surface);
+      border:1px solid var(--line);
+      border-radius:30px;
+      padding:42px 34px;
+      box-shadow:0 16px 36px rgba(15,23,42,.06);
+    }
+    .meta-box{
+      display:grid;
+      grid-template-columns:repeat(2,minmax(0,1fr));
+      gap:18px;
+      margin-bottom:28px;
+    }
+    .meta-card{
+      background:#f8faff;
+      border:1px solid rgba(47,93,204,.10);
+      border-radius:20px;
+      padding:20px;
+    }
+    .meta-card strong{
+      display:block;
+      font-size:13px;
+      text-transform:uppercase;
+      letter-spacing:.10em;
+      color:var(--blue);
+      margin-bottom:8px;
+    }
+    .meta-card p{
+      margin:0;
+      color:#334155;
+      line-height:1.8;
+    }
+    h2{
+      margin:34px 0 14px;
+      font-size:28px;
+      line-height:1.2;
+      letter-spacing:-.02em;
+      color:#16213a;
+    }
+    p{margin:0 0 14px}
+    ul{
+      margin:0 0 14px;
+      padding-left:22px;
+    }
+    li{margin-bottom:8px}
+    .notice{
+      margin-top:28px;
+      padding:18px 20px;
+      border-radius:18px;
+      background:#f7f9fd;
+      border:1px solid rgba(17,24,39,.08);
+      color:#334155;
+    }
+    footer{
+      padding:28px 0 50px;
+      background:linear-gradient(135deg,#16213a 0%, #2448a6 58%, #2f5dcc 100%);
+      color:#fff;
+    }
+    .footer-shell{
+      display:grid;
+      grid-template-columns:1.1fr .9fr;
+      gap:24px;
+      padding:28px 30px;
+      border-radius:28px;
+      background:rgba(255,255,255,.08);
+      border:1px solid rgba(255,255,255,.12);
+      box-shadow:0 18px 40px rgba(6,14,30,.22);
+    }
+    .footer-shell strong{
+      display:block;
+      font-size:28px;
+      margin-bottom:8px;
+    }
+    .footer-shell p,
+    .footer-shell a,
+    .footer-shell span{
+      color:rgba(255,255,255,.86);
+      margin:0;
+      line-height:1.9;
+    }
+    .footer-title{
+      display:block;
+      font-size:13px;
+      font-weight:800;
+      text-transform:uppercase;
+      letter-spacing:.14em;
+      color:rgba(255,255,255,.68);
+      margin-bottom:10px;
+    }
+
+    body{
+      opacity:0;
+      transform:translateY(10px);
+      animation:pageFadeIn .7s ease-out forwards;
+    }
+    .hero-card,
+    .paper,
+    .footer-shell{
+      opacity:0;
+      transform:translateY(18px);
+      animation:sectionRise .8s ease-out forwards;
+    }
+    .hero-card{animation-delay:.12s}
+    .paper{animation-delay:.24s}
+    .footer-shell{animation-delay:.36s}
+    @keyframes pageFadeIn{
+      from{opacity:0;transform:translateY(10px)}
+      to{opacity:1;transform:translateY(0)}
+    }
+    @keyframes sectionRise{
+      from{opacity:0;transform:translateY(18px)}
+      to{opacity:1;transform:translateY(0)}
+    }
+
+    .owner-card{
+      width:min(100%, 460px);
+      margin:0 auto 34px;
+      padding:28px 24px 24px;
+      border-radius:32px;
+      background:linear-gradient(180deg,#ffffff 0%, #f4f8ff 100%);
+      border:1px solid rgba(47,93,204,.14);
+      box-shadow:0 20px 44px rgba(15,23,42,.10);
+      text-align:center;
+      position:relative;
+      overflow:hidden;
+    }
+    .owner-card::before{
+      content:"";
+      position:absolute;
+      inset:auto -40px -70px auto;
+      width:180px;
+      height:180px;
+      border-radius:50%;
+      background:radial-gradient(circle, rgba(47,93,204,.16), rgba(47,93,204,0) 70%);
+      pointer-events:none;
+    }
+    .owner-badge{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      min-height:36px;
+      padding:0 14px;
+      margin-bottom:14px;
+      border-radius:999px;
+      background:rgba(47,93,204,.10);
+      color:#23469d;
+      font-size:12px;
+      font-weight:800;
+      letter-spacing:.12em;
+      text-transform:uppercase;
+    }
+    .owner-photo-wrap{
+      width:208px;
+      height:208px;
+      margin:0 auto 18px;
+      border-radius:50%;
+      padding:8px;
+      background:linear-gradient(135deg,#16213a 0%, #2f5dcc 55%, #8eb2ff 100%);
+      box-shadow:0 24px 42px rgba(47,93,204,.24);
+      position:relative;
+    }
+    .owner-photo-wrap::after{
+      content:"";
+      position:absolute;
+      inset:14px;
+      border-radius:50%;
+      border:1px solid rgba(255,255,255,.36);
+      pointer-events:none;
+    }
+    .owner-photo-wrap img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      object-position:center top;
+      border-radius:50%;
+      display:block;
+      border:5px solid #ffffff;
+      background:#eef4ff;
+    }
+    .owner-caption{
+      font-size:26px;
+      font-weight:800;
+      color:#16213a;
+      line-height:1.35;
+      letter-spacing:-.02em;
+      margin-bottom:8px;
+    }
+    .owner-subtitle{
+      margin:0;
+      color:#5f6777;
+      font-size:15px;
+      line-height:1.7;
+      font-weight:650;
+      letter-spacing:.01em;
+    }
+
+    @media (max-width:820px){
+      .topbar .container{justify-content:center;text-align:center}
+      .nav{flex-direction:column;align-items:flex-start;padding:18px 0}
+      .nav-links{width:100%;justify-content:flex-end}
+      .nav-links a.link{display:none}
+      .nav-links .btn{min-height:46px;padding:0 18px}
+      .hero{padding-top:38px}
+      .hero-card{padding:34px 22px;border-radius:24px}
+      .paper{padding:28px 18px;border-radius:22px}
+      .meta-box,.footer-shell{grid-template-columns:1fr}
+      h2{font-size:24px}
+
+      .owner-card{padding:22px 16px;border-radius:24px;margin-bottom:28px}
+      .owner-badge{font-size:11px}
+      .owner-photo-wrap{width:164px;height:164px}
+      .owner-caption{font-size:20px}
+      .owner-subtitle{font-size:14px}
+    }
+  
+
+    .info-list{
+      display:grid;
+      gap:14px;
+      margin:0 0 22px;
+    }
+    .info-row{
+      padding:18px 20px;
+      border:1px solid rgba(17,24,39,.08);
+      border-radius:18px;
+      background:#ffffff;
+    }
+    .info-row strong{
+      display:block;
+      color:#16213a;
+      margin-bottom:6px;
+      font-size:16px;
+    }
+    .legal-note{
+      margin-top:28px;
+      padding:18px 20px;
+      border-radius:18px;
+      background:#fff8ed;
+      border:1px solid rgba(180,120,20,.16);
+      color:#4b5563;
+      font-size:15px;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="topbar">
+    <div class="container">
+      <div>Reinigung & Facility Management in Kevelaer, Duisburg und Umgebung</div>
+      <div>Tel. +49 176 10870618 · info@gebaeudeservicelb.com</div>
+    </div>
+  </div>
+
+  <header>
+    <div class="container nav">
+      <a href="index.html" class="brand">
+        <div class="brand-logo">
+          <img src="logo.png" alt="Gebäudeservice Böhme Logo">
+        </div>
+        <div>
+          <div class="brand-title">Gebäudeservice Böhme</div>
+          <div class="brand-sub">Reinigung · Facility Management · Gartenpflege</div>
+        </div>
+      </a>
+
+      <nav class="nav-links">
+        <a class="link" href="index.html">Startseite</a>
+        <a class="link" href="index.html#leistungen">Leistungen</a>
+        <a class="link" href="index.html#kontakt">Kontakt</a>
+        <a class="btn btn-primary" href="index.html#kontakt">Angebot anfragen</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container">
+      <div class="hero-card">
+        <h1>Impressum</h1>
+        <p>Angaben gemäß § 5 DDG sowie rechtliche Informationen zum Internetauftritt von Gebäudeservice Böhme.</p>
+      </div>
+    </div>
+  </section>
+
+  <main class="content">
+    <div class="container">
+      <div class="owner-card">
+        <div class="owner-badge">Inhaber</div>
+        <div class="owner-photo-wrap">
+          <img src="images/profile.jpeg" alt="Porträt von Lars Böhme">
+        </div>
+        <div class="owner-caption">Lars Böhme</div>
+        <p class="owner-subtitle">Gebäudeservice Böhme</p>
+      </div>
+
+      <div class="paper">
+        <div class="meta-box">
+          <div class="meta-card">
+            <strong>Anbieter</strong>
+            <p>
+              Gebäudeservice Böhme<br>
+              Inhaber: Lars Böhme<br>
+              Karl-Leisner-Str. 2<br>
+              47623 Kevelaer
+            </p>
+          </div>
+          <div class="meta-card">
+            <strong>Kontakt</strong>
+            <p>
+              Mobil: <a href="tel:+4917610870618">+49 176 10870618</a><br>
+              E-Mail: <a href="mailto:info@gebaeudeservicelb.com">info@gebaeudeservicelb.com</a>
+            </p>
+          </div>
+        </div>
+
+        <h2>Angaben gemäß § 5 DDG</h2>
+        <div class="info-list">
+          <div class="info-row">
+            <strong>Gebäudeservice Böhme</strong>
+            Inhaber: Lars Böhme<br>
+            Karl-Leisner-Str. 2<br>
+            47623 Kevelaer<br>
+            Deutschland
+          </div>
+          <div class="info-row">
+            <strong>Zweigstelle / Büro Duisburg</strong>
+            Auf dem Damm 112<br>
+            Duisburg<br>
+            Deutschland
+          </div>
+          <div class="info-row">
+            <strong>Kontakt</strong>
+            Telefon: <a href="tel:+4917610870618">+49 176 10870618</a><br>
+            E-Mail: <a href="mailto:info@gebaeudeservicelb.com">info@gebaeudeservicelb.com</a>
+          </div>
+          <div class="info-row">
+            <strong>Vertreten durch</strong>
+            Lars Böhme
+          </div>
+        </div>
+
+        <h2>Verantwortlich für den Inhalt</h2>
+        <p>Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV:</p>
+        <p>
+          Lars Böhme<br>
+          Gebäudeservice Böhme<br>
+          Karl-Leisner-Str. 2<br>
+          47623 Kevelaer
+        </p>
+
+        <h2>EU-Streitschlichtung</h2>
+        <p>Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung bereit. Verbraucher können diese Plattform nutzen, um Streitigkeiten aus Online-Verträgen außergerichtlich zu klären.</p>
+        <p>Unsere E-Mail-Adresse finden Sie oben im Impressum.</p>
+
+        <h2>Verbraucherstreitbeilegung</h2>
+        <p>Wir sind nicht verpflichtet und nicht bereit, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.</p>
+
+        <h2>Haftung für Inhalte</h2>
+        <p>Als Diensteanbieter sind wir für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich. Wir sind jedoch nicht verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen oder nach Umständen zu forschen, die auf eine rechtswidrige Tätigkeit hinweisen.</p>
+        <p>Verpflichtungen zur Entfernung oder Sperrung der Nutzung von Informationen nach den allgemeinen Gesetzen bleiben hiervon unberührt. Eine diesbezügliche Haftung ist jedoch erst ab dem Zeitpunkt der Kenntnis einer konkreten Rechtsverletzung möglich. Bei Bekanntwerden entsprechender Rechtsverletzungen entfernen wir diese Inhalte umgehend.</p>
+
+        <h2>Haftung für Links</h2>
+        <p>Unser Angebot kann Links zu externen Websites Dritter enthalten, auf deren Inhalte wir keinen Einfluss haben. Deshalb können wir für diese fremden Inhalte keine Gewähr übernehmen. Für die Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter oder Betreiber der Seiten verantwortlich.</p>
+        <p>Bei Bekanntwerden von Rechtsverletzungen entfernen wir derartige Links umgehend.</p>
+
+        <h2>Urheberrecht</h2>
+        <p>Die durch den Seitenbetreiber erstellten Inhalte und Werke auf dieser Website unterliegen dem deutschen Urheberrecht. Beiträge Dritter werden als solche gekennzeichnet. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechts bedürfen der schriftlichen Zustimmung des jeweiligen Autors bzw. Erstellers.</p>
+
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-shell">
+        <div>
+          <strong>Gebäudeservice Böhme</strong>
+          <p>Reinigung & Facility Management, Hausmeisterservice und Gartenpflege in Kevelaer, Duisburg und Umgebung – zuverlässig, freundlich und flexibel für Privat- und Geschäftskunden.</p>
+        </div>
+        <div>
+          <span class="footer-title">Kontakt</span>
+          <p>Hauptsitz: Karl-Leisner-Str. 2, 47623 Kevelaer</p>
+          <p>Zweigstelle / Büro Duisburg: Auf dem Damm 112, Duisburg</p>
+          <p><a href="tel:+4917610870618">+49 176 10870618</a></p>
+          <p><a href="mailto:info@gebaeudeservicelb.com">info@gebaeudeservicelb.com</a></p>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
