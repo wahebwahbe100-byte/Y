@@ -4047,6 +4047,54 @@ footer{
   }
 }
 
+/* === PARTNER WHITE AREA FIX: blurred image background instead of plain white === */
+.partner-image-display{
+  position:relative !important;
+  background:#23469d !important;
+  isolation:isolate;
+}
+.partner-image-display::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background-image:var(--partner-img);
+  background-size:cover;
+  background-position:center;
+  filter:blur(22px);
+  transform:scale(1.16);
+  opacity:.58;
+  z-index:0;
+}
+.partner-image-display::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(135deg, rgba(47,93,204,.30), rgba(22,33,58,.18));
+  z-index:1;
+}
+.partner-image-display img{
+  position:relative !important;
+  z-index:2 !important;
+  object-fit:contain !important;
+  background:transparent !important;
+  box-shadow:0 12px 28px rgba(0,0,0,.14);
+}
+@media (max-width:780px){
+  .partner-image-display{
+    aspect-ratio:4 / 3 !important;
+  }
+  .partner-image-display::before{
+    filter:blur(18px);
+    transform:scale(1.18);
+    opacity:.62;
+  }
+}
+@media (max-width:420px){
+  .partner-image-display{
+    aspect-ratio:4 / 3 !important;
+  }
+}
+
 </style>
 
   <!-- Favicon -->
@@ -4143,21 +4191,21 @@ footer{
 
         <div class="partner-slider" id="partnerSlider">
           <article class="partner-item active">
-            <div class="partner-image-display">
+            <div class="partner-image-display" style="--partner-img:url('images/cleverfit.jpeg')">
               <img src="images/cleverfit.jpeg" alt="CleverFit – Kamp-Lintfort">
             </div>
             <div class="partner-name">CleverFit – Kamp-Lintfort</div>
           </article>
 
           <article class="partner-item">
-            <div class="partner-image-display">
+            <div class="partner-image-display" style="--partner-img:url('images/edeka.jpeg')">
               <img src="images/edeka.jpeg" alt="Edeka Center – Kempen">
             </div>
             <div class="partner-name">Edeka Center – Kempen</div>
           </article>
 
           <article class="partner-item">
-            <div class="partner-image-display">
+            <div class="partner-image-display" style="--partner-img:url('images/mediwax.jpeg')">
               <img src="images/mediwax.jpeg" alt="Medivax GmbH – Duisburg">
             </div>
             <div class="partner-name">Medivax GmbH – Duisburg</div>
