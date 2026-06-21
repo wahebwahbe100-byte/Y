@@ -4095,6 +4095,39 @@ footer{
   }
 }
 
+
+
+/* === FAQ text size adjustment: only FAQ heading, intro and question text === */
+.faq-section .section-head h2{
+  font-size:clamp(28px, 3.6vw, 44px) !important;
+  line-height:1.08 !important;
+}
+.faq-section .section-head p{
+  font-size:16px !important;
+  line-height:1.7 !important;
+}
+.faq-item summary{
+  min-height:60px !important;
+  padding:15px 20px !important;
+  font-size:17px !important;
+  line-height:1.35 !important;
+}
+@media (max-width:780px){
+  .faq-section .section-head h2{
+    font-size:28px !important;
+  }
+  .faq-section .section-head p{
+    font-size:15px !important;
+    line-height:1.65 !important;
+  }
+  .faq-item summary{
+    min-height:56px !important;
+    padding:14px 15px !important;
+    font-size:16px !important;
+    line-height:1.35 !important;
+  }
+}
+
 </style>
 
   <!-- Favicon -->
