@@ -4711,6 +4711,157 @@ footer{
   }
 }
 
+
+
+/* === FIX: phone number in Kontakt box stays normal and does not move === */
+#reinigungskonzept .final-contact-line.phone-static,
+#reinigungskonzept .final-contact-line.phone-static:hover{
+  transform:none !important;
+}
+#reinigungskonzept .final-contact-line.phone-static .contact-icon{
+  display:inline-flex !important;
+  align-items:center !important;
+  justify-content:center !important;
+  width:28px !important;
+  min-width:28px !important;
+  height:28px !important;
+  border-radius:10px !important;
+  background:rgba(47,93,204,.10) !important;
+  color:#2f5dcc !important;
+  font-family:Arial, Helvetica, sans-serif !important;
+  font-size:15px !important;
+  line-height:1 !important;
+  letter-spacing:normal !important;
+  font-style:normal !important;
+}
+#reinigungskonzept .final-contact-line.phone-static .phone-text{
+  display:inline !important;
+  width:auto !important;
+  min-width:0 !important;
+  height:auto !important;
+  padding:0 !important;
+  margin:0 !important;
+  border-radius:0 !important;
+  background:transparent !important;
+  color:#263247 !important;
+  font-family:Arial, Helvetica, sans-serif !important;
+  font-size:inherit !important;
+  font-weight:inherit !important;
+  line-height:inherit !important;
+  letter-spacing:normal !important;
+  font-style:normal !important;
+  white-space:nowrap !important;
+}
+#reinigungskonzept .final-contact-line.phone-static:hover .phone-text{
+  color:#263247 !important;
+}
+
+
+/* === FINAL FIX: phone number same color as email, no movement === */
+#reinigungskonzept .final-contact-line.phone-static .phone-text,
+#reinigungskonzept .final-contact-line.phone-static:hover .phone-text{
+  color:#263247 !important;
+  font-size:inherit !important;
+  font-weight:inherit !important;
+  transform:none !important;
+}
+
+
+/* === FINAL MERGE FIX: Kundenbewertungen + Individuell section === */
+/* Removes the oversized blue empty area between the reviews and the next banner. */
+#bewertungen.reviews{
+  padding:54px 0 28px !important;
+  margin:0 !important;
+  background:#2f5dcc !important;
+}
+#bewertungen .section-head{
+  margin-bottom:18px !important;
+}
+#bewertungen .reviews-shell{
+  padding:8px 80px 0 !important;
+  margin-bottom:0 !important;
+}
+#bewertungen .review-slider{
+  min-height:170px !important;
+}
+#bewertungen .review-dots{
+  margin-top:8px !important;
+  margin-bottom:0 !important;
+}
+#bewertungen + #reinigungskonzept.highlight-services,
+#reinigungskonzept.highlight-services{
+  margin-top:0 !important;
+  padding-top:0 !important;
+  background:#2f5dcc !important;
+}
+#reinigungskonzept.highlight-services::before{
+  content:none !important;
+  display:none !important;
+}
+#reinigungskonzept > .container{
+  width:100% !important;
+  max-width:none !important;
+  padding-left:0 !important;
+  padding-right:0 !important;
+}
+#reinigungskonzept .highlight-summary{
+  width:100% !important;
+  max-width:none !important;
+  margin:0 !important;
+  padding-top:0 !important;
+  background:#2f5dcc !important;
+  overflow:hidden !important;
+}
+#reinigungskonzept .individual-hero-banner{
+  margin-top:0 !important;
+  border-top:0 !important;
+}
+@media (max-width:780px){
+  #bewertungen.reviews{
+    padding:40px 0 22px !important;
+  }
+  #bewertungen .reviews-shell{
+    padding:6px 46px 0 !important;
+  }
+  #bewertungen .review-slider{
+    min-height:210px !important;
+  }
+  #bewertungen .review-dots{
+    margin-top:6px !important;
+  }
+  #reinigungskonzept.highlight-services{
+    padding-top:0 !important;
+  }
+}
+/* === END FINAL MERGE FIX === */
+
+
+/* === FINAL POLISH: softer proportional phone number in Kontakt card === */
+#reinigungskonzept .final-contact-cta-right .final-contact-line{
+  color:#344054 !important;
+  font-size:15.5px !important;
+  font-weight:800 !important;
+}
+#reinigungskonzept .final-contact-line.phone-static,
+#reinigungskonzept .final-contact-line.phone-static:hover{
+  transform:none !important;
+}
+#reinigungskonzept .final-contact-line.phone-static .phone-text,
+#reinigungskonzept .final-contact-line.phone-static:hover .phone-text{
+  color:inherit !important;
+  font-family:"Playfair Display", serif !important;
+  font-size:1em !important;
+  font-weight:inherit !important;
+  line-height:1.25 !important;
+  letter-spacing:0 !important;
+  font-style:normal !important;
+  white-space:nowrap !important;
+  font-variant-numeric:lining-nums proportional-nums !important;
+  font-feature-settings:"lnum" 1, "pnum" 1 !important;
+  background:transparent !important;
+  transform:none !important;
+}
+
 </style>
 
   <!-- Favicon -->
@@ -5057,7 +5208,7 @@ footer{
 
               <div class="final-contact-cta-right">
                 <h4>Kontakt</h4>
-                <a class="final-contact-line" href="tel:+4917610870618"><span>☎</span> +49 176 10870618</a>
+                <a class="final-contact-line phone-static" href="tel:+4917610870618"><span class="contact-icon">☎</span><span class="phone-text num-normal">+49 176 10870618</span></a>
                 <a class="final-contact-line" href="mailto:Info@gebaeudeserviceboehme.de"><span>✉</span> Info@gebaeudeserviceboehme.de</a>
                 <a class="final-contact-main-btn" href="kontakt.html">Jetzt kontaktieren →</a>
               </div>
