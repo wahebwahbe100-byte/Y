@@ -4349,6 +4349,368 @@ footer{
   }
 }
 
+
+
+/* === PREMIUM FAQ + ABOUT/CONTACT DESIGN OVERRIDE === */
+#reinigungskonzept .merged-contact-section{
+  width:min(100%, 1040px) !important;
+  max-width:1040px !important;
+  margin:48px auto 0 !important;
+  padding:0 18px !important;
+}
+
+#reinigungskonzept .faq-merged{
+  position:relative !important;
+  max-width:100% !important;
+  margin:0 auto !important;
+  padding:30px !important;
+  border-radius:34px !important;
+  overflow:hidden !important;
+  background:
+    radial-gradient(circle at 12% 4%, rgba(255,255,255,.95), transparent 34%),
+    linear-gradient(135deg, rgba(255,255,255,.88) 0%, rgba(238,244,255,.80) 48%, rgba(218,230,255,.72) 100%) !important;
+  border:1px solid rgba(255,255,255,.58) !important;
+  box-shadow:0 26px 70px rgba(15,23,42,.16) !important;
+  backdrop-filter:blur(14px) !important;
+}
+
+#reinigungskonzept .faq-merged::before{
+  content:"";
+  position:absolute;
+  width:280px;
+  height:280px;
+  right:-110px;
+  top:-130px;
+  border-radius:50%;
+  background:rgba(47,93,204,.16);
+  pointer-events:none;
+}
+
+#reinigungskonzept .faq-merged::after{
+  content:"";
+  position:absolute;
+  left:26px;
+  right:26px;
+  top:0;
+  height:4px;
+  border-radius:999px;
+  background:linear-gradient(90deg, rgba(47,93,204,.15), #2f5dcc, rgba(47,93,204,.15));
+  pointer-events:none;
+}
+
+#reinigungskonzept .faq-section{
+  position:relative !important;
+  z-index:2 !important;
+}
+
+#reinigungskonzept .faq-section .section-head{
+  width:100% !important;
+  margin:0 0 22px !important;
+  padding:0 4px !important;
+  text-align:left !important;
+}
+
+#reinigungskonzept .faq-section .section-head h2{
+  margin:0 0 8px !important;
+  color:#081a3d !important;
+  font-size:clamp(30px, 4vw, 44px) !important;
+  line-height:1 !important;
+  letter-spacing:-.05em !important;
+  text-shadow:none !important;
+}
+
+#reinigungskonzept .faq-section .section-head p{
+  max-width:610px !important;
+  margin:0 !important;
+  color:#556174 !important;
+  font-size:16px !important;
+  line-height:1.7 !important;
+  text-shadow:none !important;
+}
+
+#reinigungskonzept .faq-list{
+  display:grid !important;
+  grid-template-columns:repeat(2, minmax(0, 1fr)) !important;
+  gap:14px !important;
+}
+
+#reinigungskonzept .faq-item{
+  position:relative !important;
+  border:1px solid rgba(47,93,204,.12) !important;
+  border-radius:22px !important;
+  overflow:hidden !important;
+  background:rgba(255,255,255,.88) !important;
+  box-shadow:0 12px 30px rgba(15,23,42,.075) !important;
+  transition:transform .25s ease, box-shadow .25s ease, border-color .25s ease, background .25s ease !important;
+}
+
+#reinigungskonzept .faq-item:hover{
+  transform:translateY(-3px) !important;
+  border-color:rgba(47,93,204,.26) !important;
+  box-shadow:0 18px 42px rgba(15,23,42,.11) !important;
+  background:#ffffff !important;
+}
+
+#reinigungskonzept .faq-item summary{
+  min-height:66px !important;
+  padding:18px 18px 18px 20px !important;
+  gap:16px !important;
+  color:#0f2147 !important;
+  font-size:17px !important;
+  line-height:1.35 !important;
+  font-weight:850 !important;
+}
+
+#reinigungskonzept .faq-item summary::after{
+  width:36px !important;
+  height:36px !important;
+  min-width:36px !important;
+  border-radius:14px !important;
+  background:linear-gradient(135deg, rgba(47,93,204,.12), rgba(47,93,204,.20)) !important;
+  color:#2f5dcc !important;
+  font-size:25px !important;
+  box-shadow:inset 0 0 0 1px rgba(47,93,204,.08) !important;
+}
+
+#reinigungskonzept .faq-item[open]{
+  background:#ffffff !important;
+  border-color:rgba(47,93,204,.30) !important;
+}
+
+#reinigungskonzept .faq-item[open] summary::after{
+  background:#2f5dcc !important;
+  color:#ffffff !important;
+  box-shadow:0 10px 22px rgba(47,93,204,.24) !important;
+}
+
+#reinigungskonzept .faq-item p{
+  padding:0 20px 18px !important;
+  color:#536071 !important;
+  font-size:15px !important;
+  line-height:1.75 !important;
+}
+
+#reinigungskonzept .final-contact-cta{
+  position:relative !important;
+  width:100% !important;
+  margin:20px auto 0 !important;
+  min-height:230px !important;
+  display:grid !important;
+  grid-template-columns:1.35fr .9fr !important;
+  border-radius:28px !important;
+  overflow:hidden !important;
+  border:1px solid rgba(255,255,255,.24) !important;
+  background:#17264a !important;
+  box-shadow:0 22px 55px rgba(15,23,42,.17) !important;
+}
+
+#reinigungskonzept .final-contact-cta-left{
+  min-height:230px !important;
+  padding:34px 36px !important;
+  background:
+    linear-gradient(90deg, rgba(10,28,70,.88) 0%, rgba(21,50,122,.72) 58%, rgba(47,93,204,.28) 100%),
+    url("hero-bg1.jpg") center/cover no-repeat !important;
+}
+
+#reinigungskonzept .final-contact-cta-left::after{
+  background:radial-gradient(circle at bottom left, rgba(255,255,255,.14), transparent 44%) !important;
+}
+
+#reinigungskonzept .final-contact-cta-content{
+  max-width:620px !important;
+}
+
+#reinigungskonzept .final-contact-kicker{
+  margin-bottom:10px !important;
+  color:rgba(255,255,255,.74) !important;
+  font-size:12px !important;
+  letter-spacing:.17em !important;
+}
+
+#reinigungskonzept .final-contact-cta h3{
+  margin:0 0 12px !important;
+  color:#ffffff !important;
+  font-size:clamp(32px, 4vw, 48px) !important;
+  line-height:.98 !important;
+  letter-spacing:-.055em !important;
+  text-shadow:0 6px 20px rgba(0,0,0,.18) !important;
+}
+
+#reinigungskonzept .final-contact-cta p{
+  max-width:590px !important;
+  margin:0 0 10px !important;
+  color:rgba(255,255,255,.88) !important;
+  font-size:15.5px !important;
+  line-height:1.75 !important;
+  font-weight:600 !important;
+}
+
+#reinigungskonzept .final-contact-cta-note{
+  color:rgba(255,255,255,.76) !important;
+  font-size:14.5px !important;
+}
+
+#reinigungskonzept .final-contact-cta-right{
+  padding:34px 30px !important;
+  background:linear-gradient(180deg, #ffffff 0%, #f2f6ff 100%) !important;
+  border-left:1px solid rgba(255,255,255,.20) !important;
+}
+
+#reinigungskonzept .final-contact-cta-right h4{
+  margin:0 0 16px !important;
+  color:#0b1b3d !important;
+  font-size:24px !important;
+  line-height:1 !important;
+  letter-spacing:-.03em !important;
+  text-transform:none !important;
+  font-style:normal !important;
+}
+
+#reinigungskonzept .final-contact-line{
+  width:100% !important;
+  min-height:46px !important;
+  margin-bottom:10px !important;
+  padding:10px 12px !important;
+  gap:10px !important;
+  border-radius:16px !important;
+  background:#ffffff !important;
+  border:1px solid rgba(47,93,204,.10) !important;
+  color:#263247 !important;
+  font-size:14.5px !important;
+  line-height:1.25 !important;
+  font-weight:800 !important;
+  box-shadow:0 8px 18px rgba(15,23,42,.045) !important;
+  transition:transform .2s ease, border-color .2s ease, box-shadow .2s ease !important;
+}
+
+#reinigungskonzept .final-contact-line:hover{
+  transform:translateX(3px) !important;
+  border-color:rgba(47,93,204,.26) !important;
+  box-shadow:0 12px 24px rgba(15,23,42,.07) !important;
+}
+
+#reinigungskonzept .final-contact-line span{
+  width:28px !important;
+  min-width:28px !important;
+  height:28px !important;
+  border-radius:10px !important;
+  background:rgba(47,93,204,.10) !important;
+  color:#2f5dcc !important;
+  font-size:15px !important;
+}
+
+#reinigungskonzept .final-contact-main-btn{
+  min-height:50px !important;
+  margin-top:12px !important;
+  border-radius:16px !important;
+  background:linear-gradient(135deg,#2f5dcc 0%, #2146a6 100%) !important;
+  color:#ffffff !important;
+  font-size:15.5px !important;
+  font-weight:900 !important;
+  box-shadow:0 16px 32px rgba(47,93,204,.25) !important;
+}
+
+#reinigungskonzept .final-contact-main-btn:hover{
+  transform:translateY(-2px) !important;
+  box-shadow:0 20px 40px rgba(47,93,204,.32) !important;
+}
+
+@media (max-width:900px){
+  #reinigungskonzept .faq-list{
+    grid-template-columns:1fr !important;
+  }
+
+  #reinigungskonzept .final-contact-cta{
+    grid-template-columns:1fr !important;
+    max-width:680px !important;
+  }
+
+  #reinigungskonzept .final-contact-cta-left{
+    min-height:auto !important;
+  }
+}
+
+@media (max-width:780px){
+  #reinigungskonzept .merged-contact-section{
+    margin-top:32px !important;
+    padding:0 12px !important;
+  }
+
+  #reinigungskonzept .faq-merged{
+    padding:18px !important;
+    border-radius:26px !important;
+  }
+
+  #reinigungskonzept .faq-merged::after{
+    left:18px;
+    right:18px;
+  }
+
+  #reinigungskonzept .faq-section .section-head{
+    text-align:center !important;
+    padding:0 !important;
+    margin-bottom:18px !important;
+  }
+
+  #reinigungskonzept .faq-section .section-head p{
+    margin:0 auto !important;
+    font-size:14.5px !important;
+  }
+
+  #reinigungskonzept .faq-item{
+    border-radius:18px !important;
+  }
+
+  #reinigungskonzept .faq-item summary{
+    min-height:58px !important;
+    padding:15px !important;
+    font-size:15.5px !important;
+  }
+
+  #reinigungskonzept .faq-item summary::after{
+    width:32px !important;
+    height:32px !important;
+    min-width:32px !important;
+    border-radius:12px !important;
+    font-size:23px !important;
+  }
+
+  #reinigungskonzept .faq-item p{
+    padding:0 15px 16px !important;
+    font-size:14.5px !important;
+    line-height:1.65 !important;
+  }
+
+  #reinigungskonzept .final-contact-cta{
+    margin-top:16px !important;
+    border-radius:24px !important;
+  }
+
+  #reinigungskonzept .final-contact-cta-left,
+  #reinigungskonzept .final-contact-cta-right{
+    padding:24px 18px !important;
+  }
+
+  #reinigungskonzept .final-contact-cta h3{
+    font-size:32px !important;
+  }
+
+  #reinigungskonzept .final-contact-cta p{
+    font-size:14.5px !important;
+    line-height:1.65 !important;
+  }
+
+  #reinigungskonzept .final-contact-cta-right h4{
+    text-align:center !important;
+    font-size:22px !important;
+  }
+
+  #reinigungskonzept .final-contact-line{
+    justify-content:flex-start !important;
+    font-size:14px !important;
+  }
+}
+
 </style>
 
   <!-- Favicon -->
@@ -4391,7 +4753,6 @@ footer{
 
       <nav class="nav-links" id="navLinks">
         <a class="link" href="#start">Startseite</a>
-        <a class="link" href="#partner">Partner</a>
         <div class="nav-dropdown" id="servicesDropdown">
           <button class="link dropdown-toggle" id="servicesToggle" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="servicesMenu">
             <span>Leistungen</span>
@@ -4406,6 +4767,8 @@ footer{
             <a href="individuelle-loesungen-complete.html">Individuelle Lösungen</a>
           </div>
         </div>
+        <a class="link" href="#partner">Partner</a>
+        <a class="link" href="#bewertungen">Bewertungen</a>
         <a class="link" href="#reinigungskonzept">Reinigungskonzept</a>
         <a class="link" href="wir-sind-ihr-verlaesslicher-partner-styled-subtle.html">Über uns</a>
         <a class="link" href="kontakt.html">Kontakt</a>
@@ -4434,50 +4797,7 @@ footer{
     </div>
   </main>
 
-  <section class="partner-section reveal" id="partner" aria-label="Partner">
-    <div class="container">
-      <div class="section-head">
-        <h2>Partner</h2>
-      </div>
-
-      <div class="partner-shell">
-        <button class="partner-nav partner-prev" type="button" aria-label="Vorheriger Partner">‹</button>
-
-        <div class="partner-slider" id="partnerSlider">
-          <article class="partner-item active">
-            <div class="partner-image-display" style="--partner-img:url('images/cleverfit.jpeg')">
-              <img src="images/cleverfit.jpeg" alt="CleverFit – Kamp-Lintfort">
-            </div>
-            <div class="partner-name">CleverFit – Kamp-Lintfort</div>
-          </article>
-
-          <article class="partner-item">
-            <div class="partner-image-display" style="--partner-img:url('images/edeka.jpeg')">
-              <img src="images/edeka.jpeg" alt="Edeka Center – Kempen">
-            </div>
-            <div class="partner-name">Edeka Center – Kempen</div>
-          </article>
-
-          <article class="partner-item">
-            <div class="partner-image-display" style="--partner-img:url('images/mediwax.jpeg')">
-              <img src="images/mediwax.jpeg" alt="Medivax GmbH – Duisburg">
-            </div>
-            <div class="partner-name">Medivax GmbH – Duisburg</div>
-          </article>
-        </div>
-
-        <button class="partner-nav partner-next" type="button" aria-label="Nächster Partner">›</button>
-
-        <div class="partner-dots" id="partnerDots">
-          <button class="partner-dot active" type="button" aria-label="Partner 1"></button>
-          <button class="partner-dot" type="button" aria-label="Partner 2"></button>
-          <button class="partner-dot" type="button" aria-label="Partner 3"></button>
-        </div>
-      </div>
-    </div>
-  </section>
-
-<section class="png-services reveal" id="leistungen">
+  <section class="png-services reveal" id="leistungen">
     <div class="container">
       <div class="section-head">
         <h2>Unsere Dienstleistungen</h2>
@@ -4541,7 +4861,54 @@ footer{
     </div>
   </section>
 
-  <section class="reviews reveal" id="bewertungen">
+  
+
+<section class="partner-section reveal" id="partner" aria-label="Partner">
+    <div class="container">
+      <div class="section-head">
+        <h2>Partner</h2>
+      </div>
+
+      <div class="partner-shell">
+        <button class="partner-nav partner-prev" type="button" aria-label="Vorheriger Partner">‹</button>
+
+        <div class="partner-slider" id="partnerSlider">
+          <article class="partner-item active">
+            <div class="partner-image-display" style="--partner-img:url('images/cleverfit.jpeg')">
+              <img src="images/cleverfit.jpeg" alt="CleverFit – Kamp-Lintfort">
+            </div>
+            <div class="partner-name">CleverFit – Kamp-Lintfort</div>
+          </article>
+
+          <article class="partner-item">
+            <div class="partner-image-display" style="--partner-img:url('images/edeka.jpeg')">
+              <img src="images/edeka.jpeg" alt="Edeka Center – Kempen">
+            </div>
+            <div class="partner-name">Edeka Center – Kempen</div>
+          </article>
+
+          <article class="partner-item">
+            <div class="partner-image-display" style="--partner-img:url('images/mediwax.jpeg')">
+              <img src="images/mediwax.jpeg" alt="Medivax GmbH – Duisburg">
+            </div>
+            <div class="partner-name">Medivax GmbH – Duisburg</div>
+          </article>
+        </div>
+
+        <button class="partner-nav partner-next" type="button" aria-label="Nächster Partner">›</button>
+
+        <div class="partner-dots" id="partnerDots">
+          <button class="partner-dot active" type="button" aria-label="Partner 1"></button>
+          <button class="partner-dot" type="button" aria-label="Partner 2"></button>
+          <button class="partner-dot" type="button" aria-label="Partner 3"></button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+<section class="reviews reveal" id="bewertungen">
     <div class="container">
       <div class="section-head">
         <h2>Kundenbewertungen</h2>
@@ -4609,6 +4976,8 @@ footer{
       </div>
     </div>
   </section>
+
+
 
 <section class="highlight-services reveal" id="reinigungskonzept">
   <div class="container">
@@ -4701,7 +5070,9 @@ footer{
 </section>
 
 
-  <div class="service-modal" id="serviceModal" aria-hidden="true">
+  
+
+<div class="service-modal" id="serviceModal" aria-hidden="true">
     <div class="service-modal-card" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
       <button class="modal-close" type="button" id="modalClose" aria-label="Schließen">×</button>
       <div class="modal-hero">
@@ -4746,8 +5117,10 @@ footer{
             <span class="footer-reference-title">Navigation</span>
             <div class="footer-reference-links">
               <a href="#start">Startseite</a>
-              <a href="#partner">Partner</a>
               <a href="#leistungen">Leistungen</a>
+              <a href="#partner">Partner</a>
+              <a href="#bewertungen">Bewertungen</a>
+              <a href="#reinigungskonzept">Reinigungskonzept</a>
               <a href="kontakt.html">Kontakt</a>
               <a href="wir-sind-ihr-verlaesslicher-partner-styled-subtle.html">Über uns</a>
             </div>
