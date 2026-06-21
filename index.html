@@ -3825,7 +3825,7 @@ footer{
 
 
 
-/* === PARTNER SECTION: SAME DESIGN AS KUNDENBEWERTUNGEN === */
+/* === PARTNER SECTION: SAME DESIGN AS KUNDENBEWERTUNGEN + MOBILE IMAGE FIX === */
 .partner-section{
   padding:54px 0 92px;
   margin-top:-2px;
@@ -3856,15 +3856,15 @@ footer{
 }
 .partner-shell{
   position:relative;
-  max-width:920px;
+  max-width:980px;
   margin:0 auto;
   text-align:center;
-  padding:20px 80px 10px;
+  padding:20px 82px 10px;
   z-index:2;
 }
 .partner-slider{
   position:relative;
-  min-height:430px;
+  min-height:470px;
 }
 .partner-item{
   display:none;
@@ -3874,13 +3874,13 @@ footer{
   display:block;
 }
 .partner-image-display{
-  width:min(100%, 720px);
+  width:min(100%, 780px);
   aspect-ratio:16 / 9;
-  margin:0 auto 22px;
+  margin:0 auto 24px;
   padding:12px;
   border-radius:34px;
-  background:rgba(255,255,255,.08);
-  border:1px solid rgba(255,255,255,.14);
+  background:rgba(255,255,255,.10);
+  border:1px solid rgba(255,255,255,.16);
   box-shadow:0 18px 40px rgba(15,23,42,.18);
   overflow:hidden;
   backdrop-filter:blur(6px);
@@ -3888,12 +3888,15 @@ footer{
 .partner-image-display img{
   width:100%;
   height:100%;
-  object-fit:cover;
+  object-fit:contain; /* الصورة كاملة بدون قص */
   object-position:center;
   display:block;
   border-radius:24px;
+  background:#ffffff;
 }
 .partner-name{
+  max-width:760px;
+  margin:0 auto;
   font-size:42px;
   font-weight:800;
   letter-spacing:-.03em;
@@ -3903,7 +3906,7 @@ footer{
 }
 .partner-nav{
   position:absolute;
-  top:50%;
+  top:45%;
   transform:translateY(-50%);
   width:56px;
   height:56px;
@@ -3928,7 +3931,7 @@ footer{
   display:flex;
   justify-content:center;
   gap:10px;
-  margin-top:20px;
+  margin-top:22px;
 }
 .partner-dot{
   width:11px;
@@ -3942,54 +3945,102 @@ footer{
 .partner-dot.active{
   background:#fff;
 }
+
 @media (max-width:780px){
   .partner-section{
-    padding:40px 0 84px;
+    padding:42px 0 82px;
   }
   .partner-section::before{
     top:-80px;
     height:96px;
   }
   .partner-shell{
-    padding:10px 46px 0;
+    width:100vw;
+    max-width:100vw;
+    margin-left:calc(50% - 50vw);
+    margin-right:calc(50% - 50vw);
+    padding:8px 14px 0;
   }
   .partner-slider{
-    min-height:350px;
-  }
-  .partner-nav{
-    width:42px;
-    height:42px;
-    font-size:30px;
+    min-height:0;
   }
   .partner-image-display{
     width:100%;
-    aspect-ratio:16 / 10;
-    padding:8px;
-    margin-bottom:18px;
-    border-radius:26px;
+    max-width:100%;
+    aspect-ratio:16 / 9;
+    padding:7px;
+    margin:0 auto 16px;
+    border-radius:24px;
+    background:rgba(255,255,255,.12);
     box-shadow:0 16px 34px rgba(15,23,42,.16);
   }
   .partner-image-display img{
-    border-radius:19px;
+    border-radius:18px;
+    object-fit:contain; /* مهم للجوال: لا تقص الصورة */
+    background:#ffffff;
   }
   .partner-name{
-    font-size:28px;
+    width:min(92vw, 520px);
+    font-size:clamp(23px, 7vw, 32px);
     line-height:1.2;
+    padding:0 8px;
   }
-}
-@media (max-width:420px){
+  .partner-nav{
+    position:static;
+    transform:none;
+    width:44px;
+    height:44px;
+    font-size:30px;
+    margin:0;
+  }
+  .partner-prev,
+  .partner-next{
+    left:auto;
+    right:auto;
+  }
   .partner-shell{
-    padding:8px 40px 0;
+    display:grid;
+    grid-template-columns:44px minmax(0, 1fr) 44px;
+    align-items:center;
+    column-gap:8px;
+  }
+  .partner-prev{
+    grid-column:1;
+    grid-row:1;
   }
   .partner-slider{
-    min-height:310px;
+    grid-column:1 / -1;
+    grid-row:1;
+    padding:0 0 62px;
+  }
+  .partner-next{
+    grid-column:3;
+    grid-row:1;
+  }
+  .partner-dots{
+    grid-column:1 / -1;
+    margin-top:-42px;
+    position:relative;
+    z-index:4;
+  }
+}
+
+@media (max-width:420px){
+  .partner-section{
+    padding:38px 0 76px;
+  }
+  .partner-shell{
+    padding-left:10px;
+    padding-right:10px;
+    column-gap:6px;
   }
   .partner-image-display{
-    aspect-ratio:16 / 10.5;
-    border-radius:22px;
+    padding:6px;
+    border-radius:21px;
+    margin-bottom:14px;
   }
   .partner-image-display img{
-    border-radius:16px;
+    border-radius:15px;
   }
   .partner-name{
     font-size:24px;
